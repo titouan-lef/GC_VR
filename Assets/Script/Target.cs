@@ -5,18 +5,22 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    [SerializeField]
+    private int _associatedKey = 0;
 
+    [SerializeField]
+    private Event _event; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _associatedKey += 256;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Remove after tests ------
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown((KeyCode)_associatedKey))
         {
             TargetHit();
         }
@@ -28,9 +32,9 @@ public class Target : MonoBehaviour
         TargetHit();
     }
 
-    private void TargetHit()
+    public void TargetHit()
     {
-        Debug.Log("Touché");
+        _event.Raise(_associatedKey - 256);
     }
 
     public void ToggleLight()
