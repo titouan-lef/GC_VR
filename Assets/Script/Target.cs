@@ -6,21 +6,23 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [SerializeField]
-    private int _associatedKey = 0;
+    public int associatedKey = 0;
+
+    private int _correctedKey;
 
     [SerializeField]
     private Event _event; 
     // Start is called before the first frame update
     void Start()
     {
-        _associatedKey += 256;
+        _correctedKey = associatedKey + 256;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Remove after tests ------
-        if (Input.GetKeyDown((KeyCode)_associatedKey))
+        if (Input.GetKeyDown((KeyCode)_correctedKey))
         {
             TargetHit();
         }
@@ -34,7 +36,7 @@ public class Target : MonoBehaviour
 
     public void TargetHit()
     {
-        _event.Raise(_associatedKey - 256);
+        _event.Raise(associatedKey);
     }
 
     public void ToggleLight()

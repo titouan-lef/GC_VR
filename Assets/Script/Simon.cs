@@ -18,6 +18,7 @@ public class Simon : MonoBehaviour
     {
         _simonOrder = new int[_difficulty];
         allTargets = GameObject.FindGameObjectsWithTag("Target");
+        SortTargets();
         _playerCurrentOrder = 0;
         _canPlayerPlay = false;
     }
@@ -32,6 +33,7 @@ public class Simon : MonoBehaviour
             for (int i = 0; i < _difficulty; i++)
             {
                 _simonOrder[i] = Random.Range(0, allTargets.Length);
+                Debug.Log(_simonOrder[i]);
             }
 
             // Display Order
@@ -79,5 +81,20 @@ public class Simon : MonoBehaviour
         {
             Debug.Log("Not Your Turn !");
         }      
+    }
+
+    private void SortTargets()
+    {
+        for (int i = 1; i < allTargets.Length; i++)
+        {
+            GameObject key = allTargets[i];
+            int j = i - 1;
+            while (j >= 0 && allTargets[j].GetComponent<Target>().associatedKey > key.GetComponent<Target>().associatedKey)
+            {
+                allTargets[j + 1] = allTargets[j];
+                j = j - 1;
+            }
+            allTargets[j + 1] = key;
+        }
     }
 }
