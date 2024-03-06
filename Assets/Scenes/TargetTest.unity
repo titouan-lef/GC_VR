@@ -132,10 +132,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87260765}
+  - component: {fileID: 87260767}
+  - component: {fileID: 87260769}
+  - component: {fileID: 87260770}
   - component: {fileID: 87260764}
+  - component: {fileID: 87260768}
   - component: {fileID: 87260766}
   m_Layer: 0
-  m_Name: SimonManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4583da419492511449bbdb965660e974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
   _difficulty: 5
 --- !u!4 &87260765
 Transform:
@@ -197,6 +202,92 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 87260768}
+        m_TargetAssemblyTypeName: LuckyLuke, Assembly-CSharp
+        m_MethodName: TouchedTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &87260767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87260763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3775a3c37b89fad4698c48b6b7d1f9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelManager:
+  - {x: 0, y: 0}
+  - {x: 1, y: 4}
+  - {x: 2, y: 2}
+  - {x: 1, y: 6}
+  - {x: 2, y: 4}
+--- !u!114 &87260768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87260763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416853cb309ef6c499a8a36aeec0730e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _difficulty: 2
+--- !u!114 &87260769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87260763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c33c2d7fec89b4681dec3e5853e3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 87260767}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &87260770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87260763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9537d987268d246a250a1ff9fc7983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _difficulty: 0
 --- !u!1001 &283887062
 PrefabInstance:
   m_ObjectHideFlags: 0

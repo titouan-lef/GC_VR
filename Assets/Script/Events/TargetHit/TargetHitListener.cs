@@ -1,8 +1,8 @@
 using UnityEngine;  /// <summary>  /// A listener that listens to a VoidEvent and invokes a UnityEvent when the VoidEvent is raised.  /// </summary>  
-public class VoidEventListener : MonoBehaviour
+public class TargetHitListener : MonoBehaviour
 {
     [SerializeField, Tooltip("Event to register with.")]
-    private Event _event;
+    private TargetHitEvent _event;
     [SerializeField, Tooltip("Response to invoke when Event is raised.")]
     private UnityEngine.Events.UnityEvent<int> _response;
     private void OnEnable()

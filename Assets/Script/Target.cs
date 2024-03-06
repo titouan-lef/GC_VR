@@ -10,12 +10,15 @@ public class Target : MonoBehaviour
 
     private int _correctedKey;
 
+    private Light _light;
+
     [SerializeField]
-    private Event _event; 
+    private TargetHitEvent _targetHitEvent;
     // Start is called before the first frame update
     void Start()
     {
         _correctedKey = associatedKey + 256;
+        _light = GetComponentInChildren<Light>();
     }
 
     // Update is called once per frame
@@ -36,12 +39,21 @@ public class Target : MonoBehaviour
 
     public void TargetHit()
     {
-        _event.Raise(associatedKey);
+        _targetHitEvent.Raise(associatedKey);
     }
 
-    public void ToggleLight()
+    public void SwitchLightOn()
     {
-        Light simonLight = GetComponentInChildren<Light>();
-        simonLight.enabled = !simonLight.enabled;
+        _light.enabled = true;
+    }
+
+    public void SwitchLightOff()
+    {
+        _light.enabled = false;
+    }
+
+    public bool IsLightOn()
+    {
+        return _light.enabled;
     }
 }
