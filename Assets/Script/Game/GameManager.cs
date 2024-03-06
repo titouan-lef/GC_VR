@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         _simonManager = GetComponent<Simon>();
         _luckyLukeManager = GetComponent<LuckyLuke>();
 
-        _allModes = new MiniGame[2];
+        _allModes = new MiniGame[3];
 
         _allModes[0] = _tutoManager;
         _allModes[1] = _simonManager;
