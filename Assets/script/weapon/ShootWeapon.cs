@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -18,32 +19,51 @@ public class ShootWeapon : MonoBehaviour
     Transform m_LaunchBulletCasePoint = null;
 
     [SerializeField]
-    float m_LaunchSpeed = 100f;
+    float m_LaunchSpeed = 500f;
 
     [SerializeField]
     float m_EjectSpeed = 25f;
 
     [SerializeField]
-    GameObject slide;
+    Animator anim;
 
     [SerializeField]
-    AudioSource panpanSound;
+    AudioSource fireSound;
 
-    public void Fire(ActivateEventArgs arg)
+    [SerializeField]
+    float m_FireRate = 0.5f;
+
+    private float lastShot = 0.0f;
+
+    private bool isCharged = false;
+
+    public void Fire()
     {
-        GameObject NewBullet = Instantiate(m_BulletPrefab, m_LaunchBulletPoint.position, m_LaunchBulletPoint.rotation, null);
-        GameObject NewBulletCase = Instantiate(m_BulletCasePrefab, m_LaunchBulletCasePoint.position, m_BulletCasePrefab.transform.rotation, null);
+        if (isCharged && Time.time > m_FireRate + lastShot)
+        {
+            Debug.Break();
+            GameObject NewBullet = Instantiate(m_BulletPrefab, m_LaunchBulletPoint.position, m_LaunchBulletPoint.rotation, null);
+            GameObject NewBulletCase = Instantiate(m_BulletCasePrefab, m_LaunchBulletCasePoint.position, m_BulletCasePrefab.transform.rotation, null);
 
-        if (NewBullet.TryGetComponent(out Rigidbody bulletrigidBody))
-            ApplyForce(bulletrigidBody, -m_LaunchSpeed);
-        if (NewBulletCase.TryGetComponent(out Rigidbody bulletCaserigidBody))
-            ApplyForce(bulletCaserigidBody, m_EjectSpeed);
+            if (NewBullet.TryGetComponent(out Rigidbody bulletrigidBody))
+                ApplyForce(bulletrigidBody,  m_LaunchSpeed);
+            if (NewBulletCase.TryGetComponent(out Rigidbody bulletCaserigidBody))
+                ApplyForce(bulletCaserigidBody, m_EjectSpeed);
+
+            anim.SetTrigger("Shoot");
+            fireSound.Play();
+            lastShot = Time.time;
+        }
+
     }
 
     void ApplyForce(Rigidbody rigidBody, float speed)
     {
-        Debug.Log(rigidBody);
-        Vector3 force = m_LaunchBulletPoint.forward * speed;
-        rigidBody.AddForce(force);
+        rigidBody.AddForce(rigidBody.transform.forward * speed);
+    }
+
+    public void ReloadWeapon()
+    {
+        isCharged = true;
     }
 }
