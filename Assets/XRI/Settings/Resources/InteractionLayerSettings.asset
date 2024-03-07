@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - M4_Bolt
+  - M4_Mag
+  - M4_RearSight
+  - M4_Sight
+  - M4_Trigger
+  - M4_Main
+  - Negev_Main
+  - Negev_Bolt
+  - Negev_Magazin
+  - Negev_Slide
+  - Negev_Trigger
   - 
   - 
   - 
