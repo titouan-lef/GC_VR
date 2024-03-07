@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ShootWeapon : MonoBehaviour
 {
@@ -28,24 +29,11 @@ public class ShootWeapon : MonoBehaviour
     [SerializeField]
     AudioSource panpanSound;
 
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Fire();
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            EjectWeaponTroll();
-        }
-    }
-
-    public void Fire()
+    public void Fire(ActivateEventArgs arg)
     {
         GameObject NewBullet = Instantiate(m_BulletPrefab, m_LaunchBulletPoint.position, m_LaunchBulletPoint.rotation, null);
         GameObject NewBulletCase = Instantiate(m_BulletCasePrefab, m_LaunchBulletCasePoint.position, m_BulletCasePrefab.transform.rotation, null);
-        ShootAnim();
-        PlayShootSound();
+
         if (NewBullet.TryGetComponent(out Rigidbody bulletrigidBody))
             ApplyForce(bulletrigidBody, -m_LaunchSpeed);
         if (NewBulletCase.TryGetComponent(out Rigidbody bulletCaserigidBody))
@@ -57,30 +45,5 @@ public class ShootWeapon : MonoBehaviour
         Debug.Log(rigidBody);
         Vector3 force = m_LaunchBulletPoint.forward * speed;
         rigidBody.AddForce(force);
-    }
-    private void ShootAnim()
-    {
-        slide.transform.position = new Vector3(slide.transform.position.x, slide.transform.position.y, slide.transform.position.z + 0.044f);
-        StartCoroutine(Delay());
-    }
-
-    private IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(0.1f);
-        slide.transform.position = new Vector3(slide.transform.position.x, slide.transform.position.y, slide.transform.position.z - 0.044f);
-
-    }
-
-    private void PlayShootSound()
-    {
-        panpanSound.Play(0);
-    }
-    private void EjectWeaponTroll()
-    {
-        if (TryGetComponent(out Rigidbody rb))
-        {
-            ApplyForce(rb, -m_LaunchSpeed);
-        }
-
     }
 }
