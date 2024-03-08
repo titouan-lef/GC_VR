@@ -752,7 +752,7 @@ MonoBehaviour:
   m_EjectSpeed: 25
   anim: {fileID: 2218563695087075773}
   fireSound: {fileID: 279197992993077370}
-  m_FireRate: 0.5
+  m_FireRate: 0.1
 --- !u!54 &2576018665320560985
 Rigidbody:
   m_ObjectHideFlags: 0
