@@ -41,7 +41,6 @@ public class ShootWeapon : MonoBehaviour
     {
         if (isCharged && Time.time > m_FireRate + lastShot)
         {
-            Debug.Break();
             GameObject NewBullet = Instantiate(m_BulletPrefab, m_LaunchBulletPoint.position, m_LaunchBulletPoint.rotation, null);
             GameObject NewBulletCase = Instantiate(m_BulletCasePrefab, m_LaunchBulletCasePoint.position, m_BulletCasePrefab.transform.rotation, null);
 
