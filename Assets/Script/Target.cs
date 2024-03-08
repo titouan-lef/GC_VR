@@ -32,7 +32,7 @@ public class Target : MonoBehaviour
         // End of Removal ----------
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         TargetHit();
     }
