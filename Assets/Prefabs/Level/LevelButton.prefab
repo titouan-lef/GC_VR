@@ -94,9 +94,6 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6565365764968888097}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
@@ -111,6 +108,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6565365764968888097}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: -876546973899608171, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -119,20 +132,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6565365764968888097}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 4dd82e886336aef458134bb37c32ee0c,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -219,34 +219,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualTarget: {fileID: 6334173356828007776}
+  _initialMaterial: {fileID: 0}
+  _selectedMaterial: {fileID: 0}
   _localAxis: {x: 0, y: 0, z: -1}
   _speedMovement: 5
   _lenghtPress: 0.1
-  _inputPress:
-    m_Name: Input Press
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c11fc8a9-6e57-4bc4-993d-3dcf3e3323f8
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 0c89832f-214a-47f0-9d55-6d12babbd9c3
-      m_Path: <XRController>{LeftHand}/{TriggerButton}
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: Generic XR Controller
-      m_Action: Input Press
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 56827f11-cfc5-4b95-9eef-e4ef69b0cf65
-      m_Path: <XRController>{RightHand}/{TriggerButton}
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Press
-      m_Flags: 0
-    m_Flags: 0
+  _leftHandPress: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  _rightHandPress: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &3781029647832140227
 GameObject:
   m_ObjectHideFlags: 0
