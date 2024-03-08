@@ -6,8 +6,8 @@ public class ButtonPressVisual : MonoBehaviour
 {
     [Header("Visual")]
     [SerializeField] private Transform _visualTarget;
-    [SerializeField] private Material _initialMaterial;
     [SerializeField] private Material _selectedMaterial;
+    [SerializeField] private Material _hoveredMaterial;
 
     [Header("Button Animation")]
     [SerializeField] private Vector3 _localAxis;                    // Axis where the button will move
@@ -16,6 +16,10 @@ public class ButtonPressVisual : MonoBehaviour
 
     [Header("Button Event Listener")]
     [SerializeField] private ButtonPressEvent _buttonPressEvent;
+
+    private MeshRenderer _meshRenderer;
+    private Material _initialMaterial;
+    private Material _currentMaterial;
 
     private Vector3 _initialLocalPos;
     private Vector3 _pressLocalPos;
@@ -31,22 +35,37 @@ public class ButtonPressVisual : MonoBehaviour
 
         _interactable = GetComponentInParent<XRBaseInteractable>();
         _interactable.selectEntered.AddListener(PressButton);
+        _interactable.hoverEntered.AddListener(HoverEnterButton);
+        _interactable.hoverExited.AddListener(HoverExitButton);
+
+        _meshRenderer = transform.parent.GetComponent<MeshRenderer>();
+        _currentMaterial = _meshRenderer.material;
+        _initialMaterial = _currentMaterial;
     }
 
-    public void PressButton(BaseInteractionEventArgs hover)
+    private void PressButton(BaseInteractionEventArgs hover)
     {
         if (_isPressing)
             return;
 
         if (hover.interactorObject is XRRayInteractor)
         {
-            // Si rayon Droite/Gauche touche et bouton Droite/Gauche appuyé
             _buttonPressEvent.Raise();
             _isPressing = true;
-            //_isDown = true;
+            _meshRenderer.material = _selectedMaterial;
+            _currentMaterial = _selectedMaterial;
             StartCoroutine(MoveButton());
         }
+    }
 
+    private void HoverEnterButton(BaseInteractionEventArgs hover)
+    {
+        _meshRenderer.material = _hoveredMaterial;
+    }
+
+    private void HoverExitButton(BaseInteractionEventArgs hover)
+    {
+        _meshRenderer.material = _currentMaterial;
     }
 
     private IEnumerator MoveButton()
@@ -56,11 +75,20 @@ public class ButtonPressVisual : MonoBehaviour
             _visualTarget.localPosition = Vector3.Lerp(_visualTarget.localPosition, _pressLocalPos, Time.deltaTime * _speedMovement);
             yield return null;
         }
+
         while (_visualTarget.localPosition != _initialLocalPos)
         {
             _visualTarget.localPosition = Vector3.Lerp(_visualTarget.localPosition, _initialLocalPos, Time.deltaTime * _speedMovement);
             yield return null;
         }
+
         _isPressing = false;
+    }
+
+    public void Deselect()
+    {
+        Debug.Log("Deselect");
+        _meshRenderer.material = _initialMaterial;
+        _currentMaterial = _initialMaterial;
     }
 }

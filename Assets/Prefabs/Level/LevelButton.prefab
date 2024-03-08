@@ -28,12 +28,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766366485659721263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7175966528318670341}
+  m_Father: {fileID: 6334173356828007776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1562963797717107065
 BoxCollider:
@@ -94,36 +94,10 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6565365764968888097}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 1a9b0b77314a0e542801c540c9a5e669,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6565365764968888097}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: -876546973899608171, guid: 844f8a77afe8d0e429f7ccf77ef57504,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -219,8 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualTarget: {fileID: 6334173356828007776}
-  _initialMaterial: {fileID: 0}
-  _selectedMaterial: {fileID: 0}
+  _selectedMaterial: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
   _localAxis: {x: 0, y: 0, z: -1}
   _speedMovement: 50
   _lenghtPress: 0.05
@@ -611,25 +584,19 @@ PrefabInstance:
     - {fileID: 65702495048144492, guid: 844f8a77afe8d0e429f7ccf77ef57504, type: 3}
     - {fileID: -8700617353114198275, guid: 844f8a77afe8d0e429f7ccf77ef57504, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 844f8a77afe8d0e429f7ccf77ef57504,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2975482307686322301}
     - targetCorrespondingSourceObject: {fileID: -5477749408508380018, guid: 844f8a77afe8d0e429f7ccf77ef57504,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7491473308594818484}
+    - targetCorrespondingSourceObject: {fileID: -5477749408508380018, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2975482307686322301}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844f8a77afe8d0e429f7ccf77ef57504, type: 3}
 --- !u!4 &6334173356828007776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5477749408508380018, guid: 844f8a77afe8d0e429f7ccf77ef57504,
-    type: 3}
-  m_PrefabInstance: {fileID: 7213815477678268910}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &6565365764968888097 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -4683669308469848369, guid: 844f8a77afe8d0e429f7ccf77ef57504,
     type: 3}
   m_PrefabInstance: {fileID: 7213815477678268910}
   m_PrefabAsset: {fileID: 0}
