@@ -17,6 +17,9 @@ public class ButtonPressVisual : MonoBehaviour
     [Header("Button Event Listener")]
     [SerializeField] private ButtonPressEvent _buttonPressEvent;
 
+    [Header("Button Label")]
+    [SerializeField] private int _buttonPressIndex = 0;
+
     private Vector3 _initialLocalPos;
     private Vector3 _pressLocalPos;
 
@@ -41,7 +44,7 @@ public class ButtonPressVisual : MonoBehaviour
         if (hover.interactorObject is XRRayInteractor)
         {
             // Si rayon Droite/Gauche touche et bouton Droite/Gauche appuyé
-            _buttonPressEvent.Raise();
+            _buttonPressEvent.Raise(_buttonPressIndex);
             _isPressing = true;
             //_isDown = true;
             StartCoroutine(MoveButton());

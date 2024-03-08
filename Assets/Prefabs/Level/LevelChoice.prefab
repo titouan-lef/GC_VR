@@ -633,6 +633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4369534035417412736, guid: 51b6fb3dc5eec9f4890ff45867f2d0a0,
+        type: 3}
+      propertyPath: _buttonPressIndex
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -711,6 +716,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level1Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369534035417412736, guid: 51b6fb3dc5eec9f4890ff45867f2d0a0,
+        type: 3}
+      propertyPath: _buttonPressIndex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -865,6 +875,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level4Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4369534035417412736, guid: 51b6fb3dc5eec9f4890ff45867f2d0a0,
+        type: 3}
+      propertyPath: _buttonPressIndex
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -943,6 +958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level3Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369534035417412736, guid: 51b6fb3dc5eec9f4890ff45867f2d0a0,
+        type: 3}
+      propertyPath: _buttonPressIndex
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

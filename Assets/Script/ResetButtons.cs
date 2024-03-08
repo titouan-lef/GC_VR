@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResetButtons : MonoBehaviour
 {
-    public void Reset()
+    public void Reset(int id)
     {
         
     }

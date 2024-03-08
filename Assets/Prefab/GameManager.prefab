@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2227881703268951739}
   - component: {fileID: 6912997649426050472}
   - component: {fileID: 954602046719215458}
+  - component: {fileID: 1746239105943557299}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -156,6 +157,34 @@ MonoBehaviour:
       - m_Target: {fileID: 6912997649426050472}
         m_TargetAssemblyTypeName: LuckyLuke, Assembly-CSharp
         m_MethodName: TouchedTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1746239105943557299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588189215502096576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801b98b336c0874eb102edb1bb6d463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 535f91c7520017c40a3ad9dc0b04c50e, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7607237025143152110}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SelectLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

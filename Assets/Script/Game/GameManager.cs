@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private int _level;
 
     private MiniGame[] _allModes;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +32,6 @@ public class GameManager : MonoBehaviour
         _allModes[2] = _luckyLukeManager;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartLevel(_level);
-        }
-    }
-
     private void StartLevel(int level)
     {
         Debug.Log("Starting Level " + level);
@@ -50,5 +41,18 @@ public class GameManager : MonoBehaviour
     public void LevelUp()
     {
         _level++;
+    }
+
+    public void SelectLevel(int level)
+    {
+        if (level == 69)
+        {
+            StartLevel(_level);
+        }
+        else
+        {
+            Debug.Log("Selected Level " + level);
+            _level = level;
+        }
     }
 }
