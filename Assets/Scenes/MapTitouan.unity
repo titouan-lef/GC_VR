@@ -2084,6 +2084,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1301798358763252782, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
+    - target: {fileID: 1749082697983521834, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
+    - target: {fileID: 3950994280329680755, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
+    - target: {fileID: 5216137802415277087, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
     - target: {fileID: 5260411653234897776, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2134,11 +2154,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5634536378614377461, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
+    - target: {fileID: 6604204662917702882, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
     - target: {fileID: 6816838996872817119, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
         type: 3}
       propertyPath: m_Name
       value: LevelChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 8042636401868715172, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
+    - target: {fileID: 8480193971312105409, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
+    - target: {fileID: 9124631962528784654, guid: 6d0ae03ff286d5647afeee4bb711cdd7,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1293262315}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

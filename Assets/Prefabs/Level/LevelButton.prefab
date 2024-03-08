@@ -222,12 +222,9 @@ MonoBehaviour:
   _initialMaterial: {fileID: 0}
   _selectedMaterial: {fileID: 0}
   _localAxis: {x: 0, y: 0, z: -1}
-  _speedMovement: 5
-  _lenghtPress: 0.1
-  _leftHandPress: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  _rightHandPress: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
+  _speedMovement: 50
+  _lenghtPress: 0.05
+  _buttonPressEvent: {fileID: 11400000, guid: 535f91c7520017c40a3ad9dc0b04c50e, type: 2}
 --- !u!1 &3781029647832140227
 GameObject:
   m_ObjectHideFlags: 0
