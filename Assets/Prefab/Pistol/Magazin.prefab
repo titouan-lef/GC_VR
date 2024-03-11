@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7880073780448305727}
   - component: {fileID: 4054227652276087863}
   - component: {fileID: 3253332223362539193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7070384456801116051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

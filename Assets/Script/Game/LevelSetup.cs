@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEditor.VersionControl;
+using Unity.XR.CoreUtils;
+using Unity.Properties;
 
-[CreateAssetMenu(fileName = "LevelSetup", menuName = "Scriptable Objects/LevelSetup")]
+[CreateAssetMenu(fileName = "LevelSetup_X", menuName = "Scriptable Objects/Level Setup")]
 public class LevelSetup : ScriptableObject
 {
-    List<Transform> targetPoses;
+    public List<Transform> targetsPoses;
 
-    public List<Transform> GetTagetPoses()
+    public void SetTargets(GameObject allTargets)
     {
-        return targetPoses;
-    }
-
-    public void SetTargetPoses()
-    {
-        GameObject[] allTargets = GameObject.FindGameObjectsWithTag("Target");
-        foreach (GameObject target in allTargets)
+        targetsPoses = new List<Transform>();
+        for (int i = 0; i < allTargets.transform.childCount; i++)
         {
-            targetPoses.Add(target.transform);
+            
+            targetsPoses.Add(PrefabUtility.GetCorrespondingObjectFromSource(allTargets.transform.GetChild(i).gameObject).transform);
         }
     }
 }
