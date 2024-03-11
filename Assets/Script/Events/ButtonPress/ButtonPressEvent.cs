@@ -12,10 +12,10 @@ public class ButtonPressEvent : ScriptableObject
     /// <summary> 
     /// Raises the event. This will trigger all the listeners. 
     /// </summary> 
-    public void Raise()
+    public void Raise(int buttonLabel)
     {
         for (int i = _listeners.Count - 1; i >= 0; i--)
-            _listeners[i].OnEventRaised();
+            _listeners[i].OnEventRaised(buttonLabel);
     }
     /// <summary> 
     /// Registers a listener to the event. 

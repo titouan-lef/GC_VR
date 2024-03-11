@@ -4,7 +4,7 @@ public class ButtonPressListener : MonoBehaviour
     [SerializeField, Tooltip("Event to register with.")]
     private ButtonPressEvent _event;
     [SerializeField, Tooltip("Response to invoke when Event is raised.")]
-    private UnityEngine.Events.UnityEvent _response;
+    private UnityEngine.Events.UnityEvent<int> _response;
     private void OnEnable()
     {
         _event.Register(this);
@@ -14,8 +14,8 @@ public class ButtonPressListener : MonoBehaviour
         _event.Unregister(this);
     }
     /// <summary>      /// Invokes the response of the listener. Usually called by the VoidEvent.      /// </summary>
-    public void OnEventRaised()
+    public void OnEventRaised(int buttonLabel)
     {
-        _response.Invoke();
+        _response.Invoke(buttonLabel);
     }
 }

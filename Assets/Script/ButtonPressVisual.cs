@@ -16,6 +16,9 @@ public class ButtonPressVisual : MonoBehaviour
 
     [Header("Button Event Listener")]
     [SerializeField] private ButtonPressEvent _buttonPressEvent;
+    
+    [Header("Button Label")]
+    [SerializeField] private int _buttonPressIndex = 0;
 
     private MeshRenderer _meshRenderer;
     private Material _initialMaterial;
@@ -50,7 +53,7 @@ public class ButtonPressVisual : MonoBehaviour
 
         if (hover.interactorObject is XRRayInteractor)
         {
-            _buttonPressEvent.Raise();
+            _buttonPressEvent.Raise(_buttonPressIndex);
             _isPressing = true;
             _meshRenderer.material = _selectedMaterial;
             _currentMaterial = _selectedMaterial;
