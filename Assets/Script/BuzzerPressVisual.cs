@@ -2,12 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ButtonPressVisual : MonoBehaviour
+public class BuzzerPressVisual : MonoBehaviour
 {
     [Header("Visual")]
     [SerializeField] private Transform _visualTarget;
-    [SerializeField] private Material _selectedMaterial;
-    [SerializeField] private Material _hoveredMaterial;
 
     [Header("Button Animation")]
     [SerializeField] private Vector3 _localAxis;                    // Axis where the button will move
@@ -15,21 +13,14 @@ public class ButtonPressVisual : MonoBehaviour
     [SerializeField] private float _lenghtPress = 0.1f;
 
     [Header("Button Event Listener")]
-    [SerializeField] private ButtonPressEvent _buttonPressEvent;
-    
-    [Header("Button Label")]
-    [SerializeField] private int _buttonPressIndex = 0;
-
-    private MeshRenderer _meshRenderer;
-    private Material _initialMaterial;
-    private Material _currentMaterial;
+    [SerializeField] private BuzzerPressEvent _buzzerPressEvent;
 
     private Vector3 _initialLocalPos;
     private Vector3 _pressLocalPos;
 
     private XRBaseInteractable _interactable;
 
-    private bool _isPressing = false;                   // Button is pressed
+    private bool _isPressing = false;                               // Button is pressed
 
     void Start()
     {
@@ -38,12 +29,6 @@ public class ButtonPressVisual : MonoBehaviour
 
         _interactable = GetComponentInParent<XRBaseInteractable>();
         _interactable.selectEntered.AddListener(PressButton);
-        _interactable.hoverEntered.AddListener(HoverEnterButton);
-        _interactable.hoverExited.AddListener(HoverExitButton);
-
-        _meshRenderer = transform.parent.GetComponent<MeshRenderer>();
-        _currentMaterial = _meshRenderer.material;
-        _initialMaterial = _currentMaterial;
     }
 
     private void PressButton(BaseInteractionEventArgs hover)
@@ -53,22 +38,10 @@ public class ButtonPressVisual : MonoBehaviour
 
         if (hover.interactorObject is XRRayInteractor)
         {
-            _buttonPressEvent.Raise(_buttonPressIndex);
+            _buzzerPressEvent.Raise();
             _isPressing = true;
-            _meshRenderer.material = _selectedMaterial;
-            _currentMaterial = _selectedMaterial;
             StartCoroutine(MoveButton());
         }
-    }
-
-    private void HoverEnterButton(BaseInteractionEventArgs hover)
-    {
-        _meshRenderer.material = _hoveredMaterial;
-    }
-
-    private void HoverExitButton(BaseInteractionEventArgs hover)
-    {
-        _meshRenderer.material = _currentMaterial;
     }
 
     private IEnumerator MoveButton()
@@ -86,12 +59,5 @@ public class ButtonPressVisual : MonoBehaviour
         }
 
         _isPressing = false;
-    }
-
-    public void Deselect()
-    {
-        Debug.Log("Deselect");
-        _meshRenderer.material = _initialMaterial;
-        _currentMaterial = _initialMaterial;
     }
 }
