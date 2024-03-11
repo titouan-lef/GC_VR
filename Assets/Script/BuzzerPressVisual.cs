@@ -13,7 +13,7 @@ public class BuzzerPressVisual : MonoBehaviour
     [SerializeField] private float _lenghtPress = 0.1f;
 
     [Header("Button Event Listener")]
-    [SerializeField] private ButtonPressEvent _buzzerPressEvent;
+    [SerializeField] private BuzzerPressEvent _buzzerPressEvent;
 
     private Vector3 _initialLocalPos;
     private Vector3 _pressLocalPos;
@@ -38,7 +38,7 @@ public class BuzzerPressVisual : MonoBehaviour
 
         if (hover.interactorObject is XRRayInteractor)
         {
-            //_buzzerPressEvent.Raise();
+            _buzzerPressEvent.Raise();
             _isPressing = true;
             StartCoroutine(MoveButton());
         }

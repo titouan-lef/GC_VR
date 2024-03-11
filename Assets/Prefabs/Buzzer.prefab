@@ -173,7 +173,7 @@ MonoBehaviour:
   _localAxis: {x: 0, y: 1, z: 0}
   _speedMovement: 50
   _lenghtPress: 0.05
-  _buttonPressEvent: {fileID: 0}
+  _buzzerPressEvent: {fileID: 11400000, guid: 78787a18ccf99db4db6ee9d2fab98cd7, type: 2}
 --- !u!1001 &1547972084588038220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 452f7df4c43140047b699f99206f79ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 452f7df4c43140047b699f99206f79ac,
         type: 3}

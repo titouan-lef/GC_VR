@@ -12,10 +12,10 @@ public class BuzzerPressEvent : ScriptableObject
     /// <summary> 
     /// Raises the event. This will trigger all the listeners. 
     /// </summary> 
-    public void Raise(int buzzerLabel)
+    public void Raise()
     {
         for (int i = _listeners.Count - 1; i >= 0; i--)
-            _listeners[i].OnEventRaised(buzzerLabel);
+            _listeners[i].OnEventRaised();
     }
     /// <summary> 
     /// Registers a listener to the event. 
