@@ -31,7 +31,6 @@ Transform:
   m_Children:
   - {fileID: 8464018520966650258}
   - {fileID: 1366850938961937746}
-  - {fileID: 4896806384246263399}
   m_Father: {fileID: 331610308092526299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419151891856198964
@@ -358,13 +357,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3682452783061788335}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.061903805, y: 0.02215732, z: -0.019597827, w: 0.9976437}
-  m_LocalPosition: {x: 0.0034, y: -0.0917, z: 0.0076}
+  m_LocalRotation: {x: -0.06190379, y: 0.022157297, z: -0.019597813, w: 0.9976437}
+  m_LocalPosition: {x: 0.0033999681, y: -0.0916996, z: 0.0076000094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8850116628957493286}
-  m_Father: {fileID: 6069988057915140605}
+  m_Father: {fileID: 331610308092526299}
   m_LocalEulerAnglesHint: {x: -7.045, y: 2.693, z: -2.417}
 --- !u!65 &3187260581911349546
 BoxCollider:
@@ -404,7 +403,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4096
   m_AttachTransform: {fileID: 8850116628957493286}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -722,7 +721,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6069988057915140605}
-  - {fileID: 6127641730669808639}
+  - {fileID: 4896806384246263399}
   - {fileID: 4377681047491670307}
   - {fileID: 2080999935695610556}
   - {fileID: 2772378096438893505}
@@ -752,7 +751,8 @@ MonoBehaviour:
   m_EjectSpeed: 25
   anim: {fileID: 2218563695087075773}
   fireSound: {fileID: 279197992993077370}
-  m_FireRate: 0.5
+  m_FireRate: 0.1
+  nbBullet: 12
 --- !u!54 &2576018665320560985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -946,37 +946,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!1 &7293522416022381314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6127641730669808639}
-  m_Layer: 0
-  m_Name: MagazinAttachPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6127641730669808639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7293522416022381314}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0322}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 331610308092526299}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8663736973552535484
 GameObject:
   m_ObjectHideFlags: 0
