@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2975482307686322301}
   - component: {fileID: 1562963797717107065}
   - component: {fileID: 1005936856046583271}
-  - component: {fileID: 210137243596714897}
   - component: {fileID: 4369534035417412736}
   m_Layer: 0
   m_Name: Interaction
@@ -158,28 +157,6 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &210137243596714897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766366485659721263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115f1a2a50d85cd4b9d6dad4c95622be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Interactable: {fileID: 1005936856046583271}
-  m_PokeCollider: {fileID: 1562963797717107065}
-  m_PokeConfiguration:
-    m_UseConstant: 1
-    m_ConstantValue:
-      m_PokeDirection: 3
-      m_InteractionDepthOffset: 0
-      m_EnablePokeAngleThreshold: 1
-      m_PokeAngleThreshold: 45
-    m_Variable: {fileID: 0}
 --- !u!114 &4369534035417412736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,11 +170,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualTarget: {fileID: 6334173356828007776}
-  _selectedMaterial: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  _selectedMaterial: {fileID: 2100000, guid: a4a1c99a3ddfb9b49b79ecf4f751f159, type: 2}
+  _hoveredMaterial: {fileID: 2100000, guid: 3de908385f4e25648af1bdcc45225e59, type: 2}
   _localAxis: {x: 0, y: 0, z: -1}
   _speedMovement: 50
   _lenghtPress: 0.05
   _buttonPressEvent: {fileID: 11400000, guid: 535f91c7520017c40a3ad9dc0b04c50e, type: 2}
+  _buttonPressIndex: 0
 --- !u!1 &3781029647832140227
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +553,28 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49e372d7bad842346968c686f6cc68e3, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
+    - target: {fileID: -4683669308469848369, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 844f8a77afe8d0e429f7ccf77ef57504,
         type: 3}
       propertyPath: m_Name
