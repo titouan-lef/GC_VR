@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textTimer: {fileID: 7961865339377595313}
-  _textTarget: {fileID: 0}
+  _textTarget: {fileID: 6634467883440725173}
 --- !u!1 &7751394030488024177
 GameObject:
   m_ObjectHideFlags: 0
