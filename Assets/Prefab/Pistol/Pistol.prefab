@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6069988057915140605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2893741238211672772}
   - component: {fileID: 279197992993077370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AudioFeedBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 9202268550773078169}
   - component: {fileID: 3052933287496857674}
   - component: {fileID: 821444449185705370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M1911
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 6047033368834246101}
   - component: {fileID: 1026792991418456162}
   - component: {fileID: 2251359315620148033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 3187260581911349546}
   - component: {fileID: 2586612041509364191}
   - component: {fileID: 8521130396024508937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MagazinPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2772378096438893505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GrabTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 5714565895394862234}
   - component: {fileID: 4759376833707526907}
   - component: {fileID: 3141157629168219556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8464018520966650258}
   - component: {fileID: 5249867571354237777}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8850116628957493286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: attachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4377681047491670307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaunchBulletPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 8748314699912656100}
   - component: {fileID: 2576018665320560985}
   - component: {fileID: 5974292159449191869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6127641730669808639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MagazinAttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366850938961937746}
   - component: {fileID: 4834213717384955322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 8050114254891576644}
   - component: {fileID: 5034099895165624211}
   - component: {fileID: 2218563695087075773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2080999935695610556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaunchBulletCasePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
