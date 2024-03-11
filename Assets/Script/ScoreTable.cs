@@ -6,46 +6,54 @@ using UnityEngine;
 public class ScoreTable : MonoBehaviour
 {
     [SerializeField] private TextMeshPro _textTimer;
-    [SerializeField] private TextMeshPro _textScore;
-
-    [SerializeField] private float _StartTime = 10;
+    [SerializeField] private TextMeshPro _textTarget;
 
     private float _time;
-    private int _score;
+    private int _targetNumber;
 
     private void Awake()
     {
         Reset();
     }
 
-    private void Update()
+    private IEnumerator UpdateScoreTable()
     {
-        if (_time > 0)
+        while (_time > 0 && _targetNumber > 0)
         {
             _time -= Time.deltaTime;
             _textTimer.text = _time.ToString("F2");
-        }
-        else
-        {
-            _textTimer.text = "0,00";
+            _textTarget.text = _targetNumber.ToString();
+            yield return null;
         }
 
-        _textScore.text = _score.ToString();
+        if (_time <= 0)
+            _textTimer.text = "0,00";
+
+        _textTarget.text = _targetNumber.ToString();
+    }
+
+    public void StartScoreTable()
+    {
+        StartCoroutine(UpdateScoreTable());
+    }
+
+    public void Reset(float time, int targetNumber)
+    {
+        _time = time;
+        _targetNumber = targetNumber;
     }
 
     public void Reset()
     {
-        _time = _StartTime;
-        _score = 0;
+        _time = 0;
+        _targetNumber = 0;
     }
 
-    public void AddScore(int score)
+    public void DecrementScore()
     {
-        _score += score;
-    }
+        --_targetNumber;
 
-    public void IncrementScore()
-    {
-        ++_score;
+        if (_targetNumber < 0)
+            _targetNumber = 0;
     }
 }
