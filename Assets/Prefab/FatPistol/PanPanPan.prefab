@@ -166,7 +166,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 8192
   m_AttachTransform: {fileID: 4203286162372128906}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 443903643173902566}
   m_Layer: 0
   m_Name: PanPanPan
-  m_TagString: Untagged
+  m_TagString: Negev
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,6 +362,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3719172699630882552}
         m_TargetAssemblyTypeName: ShootWeapon, Assembly-CSharp
+        m_MethodName: StartFire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3719172699630882552}
+        m_TargetAssemblyTypeName: ShootWeapon, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 1
         m_Arguments:
@@ -374,7 +386,19 @@ MonoBehaviour:
         m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3719172699630882552}
+        m_TargetAssemblyTypeName: ShootWeapon, Assembly-CSharp
+        m_MethodName: StopFire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -478,6 +502,7 @@ MonoBehaviour:
   anim: {fileID: 8355403260525913248}
   fireSound: {fileID: 4379631723508284045}
   m_FireRate: 0.1
+  nbBullet: 150
 --- !u!65 &443903643173902566
 BoxCollider:
   m_ObjectHideFlags: 0
