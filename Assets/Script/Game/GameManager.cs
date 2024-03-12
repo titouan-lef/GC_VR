@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     private MiniGame[] _allModes;
 
+    private ScoreTable _scoreTable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,17 @@ public class GameManager : MonoBehaviour
         _allModes[0] = _tutoManager;
         _allModes[1] = _simonManager;
         _allModes[2] = _luckyLukeManager;
+
+
+        _scoreTable = FindAnyObjectByType<ScoreTable>();
+
+        SelectLevel(1);
+    }
+
+    public void StartCurrentLevel()
+    {
+        StartLevel(_level);
+        _scoreTable.StartScoreTable();
     }
 
     private void StartLevel(int level)
@@ -55,30 +68,33 @@ public class GameManager : MonoBehaviour
 
     public void SelectLevel(int level)
     {
-        if (level == 69)
+        // Destroy Previous Targets
+        for (int i = 0; i < _targets.transform.childCount; i++)
         {
-            StartLevel(_level);
+            Destroy(_targets.transform.GetChild(i).gameObject);
         }
-        else
+
+        LevelSetup currentLevelSetup = _levelSetup[level];
+        for (int i = 0; i < currentLevelSetup.targetsPoses.Count; i++)
         {
-            if (level <= 4)
-            {
-                // Destroy Previous Targets
-                for (int i = 0; i < _targets.transform.childCount; i++)
-                {
-                    Destroy(_targets.transform.GetChild(i).gameObject);
-                }
-
-                LevelSetup currentLevelSetup = _levelSetup[level];
-                for (int i = 0; i < currentLevelSetup.targetsPoses.Count; i++)
-                {
-                    var newTarget = Instantiate(_target, currentLevelSetup.targetsPoses[i], currentLevelSetup.targetsRotation[i], _targets.transform);
-                    newTarget.associatedKey = i;
-                }
-
-                Debug.Log("Selected Level " + level);
-                _level = level;
-            }
+            var newTarget = Instantiate(_target, currentLevelSetup.targetsPoses[i], currentLevelSetup.targetsRotation[i], _targets.transform);
+            newTarget.associatedKey = i;
         }
+
+        Debug.Log("Selected Level " + level);
+        _level = level;
+
+        switch ((int)_levelManager[level].x)
+        {
+            case 0:
+                break;
+            case 1:
+                _scoreTable.ResetAffichage(0.0f, (int)_levelManager[level].y);
+                break;
+            case 2:
+                _scoreTable.ResetAffichage(_luckyLukeManager.timeToShoot, currentLevelSetup.targetsPoses.Count);
+                break;
+        }
+        
     }
 }

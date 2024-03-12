@@ -15,6 +15,8 @@ public abstract class MiniGame : MonoBehaviour
 
     protected GameObject[] allTargets;
 
+    protected ScoreTable scoreTable;
+
     protected void SortTargets()
     {
         for (int i = 1; i < allTargets.Length; i++)

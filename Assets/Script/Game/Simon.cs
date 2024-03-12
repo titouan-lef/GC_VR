@@ -14,6 +14,8 @@ public class Simon : MiniGame
         SortTargets();
         _canPlayerPlay = false;
         _playerCurrentOrder = 0;
+
+        scoreTable = FindAnyObjectByType<ScoreTable>();
     }
 
     public override void StartMiniGame(int difficulty)
@@ -68,7 +70,8 @@ public class Simon : MiniGame
             }
 
             _playerCurrentOrder = _canPlayerPlay ? _playerCurrentOrder + 1 : 0;
-            
+
+            scoreTable.DecrementScore();
         }     
     }
 }

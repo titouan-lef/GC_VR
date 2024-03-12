@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualTarget: {fileID: 7111387496783077034}
-  _localAxis: {x: 0, y: 1, z: 0}
+  _localAxis: {x: 0, y: -1, z: 0}
   _speedMovement: 50
-  _lenghtPress: 0.05
+  _lenghtPress: 0.1
   _buzzerPressEvent: {fileID: 11400000, guid: 78787a18ccf99db4db6ee9d2fab98cd7, type: 2}
 --- !u!1001 &1547972084588038220
 PrefabInstance:

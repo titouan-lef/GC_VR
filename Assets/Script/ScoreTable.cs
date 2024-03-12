@@ -37,7 +37,7 @@ public class ScoreTable : MonoBehaviour
         StartCoroutine(UpdateScoreTable());
     }
 
-    public void Reset(float time, int targetNumber)
+    public void ResetAffichage(float time, int targetNumber)
     {
         _time = time;
         _targetNumber = targetNumber;

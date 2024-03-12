@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LuckyLuke : MiniGame
 {
-    private float _timeToShoot;
+    public float timeToShoot;
     private float _startTime;
     private int _score;
 
@@ -14,7 +14,9 @@ public class LuckyLuke : MiniGame
         allTargets = GameObject.FindGameObjectsWithTag("Target");
         SortTargets();
         _canPlayerPlay = false;
-        _timeToShoot = 10.0f/(float)_difficulty;
+        timeToShoot = 10.0f/(float)_difficulty;
+
+        scoreTable = FindAnyObjectByType<ScoreTable>();
     }
 
     public override void StartMiniGame(int difficulty)
@@ -47,7 +49,7 @@ public class LuckyLuke : MiniGame
 
     private IEnumerator EndLuckyLuke()
     {
-        yield return new WaitForSeconds(_timeToShoot);
+        yield return new WaitForSeconds(timeToShoot);
         _canPlayerPlay = false;
         foreach (var target in allTargets)
         {
@@ -67,6 +69,7 @@ public class LuckyLuke : MiniGame
             {
                 allTargets[id].GetComponent<Target>().SwitchLightOff();
                 _score++;
+                scoreTable.DecrementScore();
                 if (_score == allTargets.Length)
                 {
                     Debug.Log("You Win !");
@@ -80,7 +83,6 @@ public class LuckyLuke : MiniGame
             {
                 Debug.Log("Deja Touchée");
             }
-
         }
     }
 }
