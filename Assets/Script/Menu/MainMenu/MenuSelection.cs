@@ -31,7 +31,6 @@ public class MenuSelection : MonoBehaviour
 
     private void HoverEnterButton(BaseInteractionEventArgs hover)
     {
-        Debug.Log("HoverEnterButton");
         _text.color = _hoverColor;
     }
 
