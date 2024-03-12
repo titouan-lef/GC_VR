@@ -28,7 +28,6 @@ public class ResetButtons : MonoBehaviour
 
     public void Reset(int id)
     {
-        Debug.Log("Reset");
         foreach (ButtonPressVisual button in _buttons)
             button.Deselect();
     }

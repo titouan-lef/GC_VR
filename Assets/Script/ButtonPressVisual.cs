@@ -90,8 +90,14 @@ public class ButtonPressVisual : MonoBehaviour
 
     public void Deselect()
     {
-        Debug.Log("Deselect");
         _meshRenderer.material = _initialMaterial;
         _currentMaterial = _initialMaterial;
+    }
+
+    public void Select()
+    {
+        Debug.Log("Select");
+        _meshRenderer.material = _selectedMaterial;
+        _currentMaterial = _selectedMaterial;
     }
 }
