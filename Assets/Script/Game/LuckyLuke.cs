@@ -19,6 +19,8 @@ public class LuckyLuke : MiniGame
 
     public override void StartMiniGame(int difficulty)
     {
+        allTargets = GameObject.FindGameObjectsWithTag("Target");
+        SortTargets();
         _difficulty = difficulty;
         float timeToPrepare = Random.Range(2.0f, 5.0f);
         _score = 0;

@@ -18,6 +18,8 @@ public class Simon : MiniGame
 
     public override void StartMiniGame(int difficulty)
     {
+        allTargets = GameObject.FindGameObjectsWithTag("Target");
+        SortTargets();
         _difficulty = difficulty;
         _simonOrder = new int[_difficulty];
         // Random Order every time

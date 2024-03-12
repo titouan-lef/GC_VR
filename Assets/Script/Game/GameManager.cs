@@ -10,6 +10,15 @@ public class GameManager : MonoBehaviour
     private LuckyLuke _luckyLukeManager;
 
     [SerializeField]
+    private Target _target;
+
+    [SerializeField]
+    private GameObject _targets;
+
+    [SerializeField]
+    private LevelSetup[] _levelSetup;
+
+    [SerializeField]
     private UnityEngine.Vector2[] _levelManager;
 
     private int _level;
@@ -41,6 +50,7 @@ public class GameManager : MonoBehaviour
     public void LevelUp()
     {
         _level++;
+        SelectLevel(_level);
     }
 
     public void SelectLevel(int level)
@@ -51,8 +61,24 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Selected Level " + level);
-            _level = level;
+            if (level <= 4)
+            {
+                // Destroy Previous Targets
+                for (int i = 0; i < _targets.transform.childCount; i++)
+                {
+                    Destroy(_targets.transform.GetChild(i).gameObject);
+                }
+
+                LevelSetup currentLevelSetup = _levelSetup[level];
+                for (int i = 0; i < currentLevelSetup.targetsPoses.Count; i++)
+                {
+                    var newTarget = Instantiate(_target, currentLevelSetup.targetsPoses[i], currentLevelSetup.targetsRotation[i], _targets.transform);
+                    newTarget.associatedKey = i;
+                }
+
+                Debug.Log("Selected Level " + level);
+                _level = level;
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ public class MakeLevelSetup : MonoBehaviour
         _asset = ScriptableObject.CreateInstance<LevelSetup>();
         _asset.SetTargets(@this.targetParent);
 
-        AssetDatabase.CreateAsset(_asset, "Assets/ScriptableObjects/LevelSetup/LevelSetup.asset");
+        AssetDatabase.CreateAsset(_asset, "Assets/ScriptableObjects/LevelSetup/LevelSetup_X.asset");
         AssetDatabase.SaveAssets();
 
         EditorUtility.FocusProjectWindow();

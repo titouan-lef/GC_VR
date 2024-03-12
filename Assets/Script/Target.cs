@@ -21,17 +21,6 @@ public class Target : MonoBehaviour
         _light = GetComponentInChildren<Light>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Remove after tests ------
-        if (Input.GetKeyDown((KeyCode)_correctedKey))
-        {
-            TargetHit();
-        }
-        // End of Removal ----------
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         TargetHit();

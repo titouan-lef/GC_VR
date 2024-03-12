@@ -11,15 +11,17 @@ using Unity.Properties;
 [CreateAssetMenu(fileName = "LevelSetup_X", menuName = "Scriptable Objects/Level Setup")]
 public class LevelSetup : ScriptableObject
 {
-    public List<Transform> targetsPoses;
+    public List<Vector3> targetsPoses;
+    public List<Quaternion> targetsRotation;
 
     public void SetTargets(GameObject allTargets)
     {
-        targetsPoses = new List<Transform>();
+        targetsPoses = new List<Vector3>();
+        targetsRotation = new List<Quaternion>();
         for (int i = 0; i < allTargets.transform.childCount; i++)
         {
-            
-            targetsPoses.Add(PrefabUtility.GetCorrespondingObjectFromSource(allTargets.transform.GetChild(i).gameObject).transform);
+            targetsPoses.Add(allTargets.transform.GetChild(i).gameObject.transform.position);
+            targetsRotation.Add(allTargets.transform.GetChild(i).gameObject.transform.rotation);
         }
     }
 }
