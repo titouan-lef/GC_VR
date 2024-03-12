@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class MenuSelection : MonoBehaviour
@@ -8,7 +7,6 @@ public class MenuSelection : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private Color _initialColor;
     [SerializeField] private Color _hoverColor;
-    [SerializeField] private string _sceneToLoad;
 
     private XRBaseInteractable _interactable;
 
@@ -27,7 +25,7 @@ public class MenuSelection : MonoBehaviour
     {
         if (hover.interactorObject is XRRayInteractor)
         {
-            SceneManager.LoadScene(_sceneToLoad);
+            SelectionnedAction();
         }
     }
 
@@ -40,5 +38,10 @@ public class MenuSelection : MonoBehaviour
     private void HoverExitButton(BaseInteractionEventArgs hover)
     {
        _text.color = _initialColor;
+    }
+
+    virtual protected void SelectionnedAction()
+    {
+
     }
 }

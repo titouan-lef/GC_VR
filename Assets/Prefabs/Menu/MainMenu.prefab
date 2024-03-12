@@ -283,6 +283,8 @@ GameObject:
   - component: {fileID: 772966385157003451}
   - component: {fileID: 989816996740034166}
   - component: {fileID: 127378493437696375}
+  - component: {fileID: 3663671541002478965}
+  - component: {fileID: 2105358989972654252}
   m_Layer: 5
   m_Name: TutorialButton
   m_TagString: Untagged
@@ -494,6 +496,43 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &3663671541002478965
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123407754043968574}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 500, y: 70, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2105358989972654252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123407754043968574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d705bcd25f6b843b98ae57cd2a421e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 125637884241325914}
+  _initialColor: {r: 1, g: 1, b: 1, a: 1}
+  _hoverColor: {r: 0.5686275, g: 0.83921576, b: 0.9058824, a: 1}
+  _sceneToLoad: Map
 --- !u!1 &2814618522164444277
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +942,8 @@ GameObject:
   - component: {fileID: 694629118039996430}
   - component: {fileID: 2326144630383896237}
   - component: {fileID: 8944889115959553638}
+  - component: {fileID: 7862712807902634437}
+  - component: {fileID: 8536250837425155710}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1114,6 +1155,44 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &7862712807902634437
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594431451187028539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 500, y: 70, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8536250837425155710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594431451187028539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4982c14a1ec6e084bb2c2d2c553173b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 8431742114548550043}
+  _initialColor: {r: 1, g: 1, b: 1, a: 1}
+  _hoverColor: {r: 0.5686275, g: 0.8392157, b: 0.90588236, a: 1}
+  _currentMenu: {fileID: 3000275881329482753}
+  _nextMenu: {fileID: 0}
 --- !u!1 &5231365254221204231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,8 +1281,8 @@ GameObject:
   - component: {fileID: 5260273111284674513}
   - component: {fileID: 2093260628359872476}
   - component: {fileID: 6155308840049588274}
-  - component: {fileID: 6120681838866293733}
   - component: {fileID: 731925781855487527}
+  - component: {fileID: 8342341753246983959}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1415,22 +1494,6 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6120681838866293733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7887967859931023885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfec592c7539d5d49a33daece6947da1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 7656009493407912065}
-  _initialColor: {r: 1, g: 1, b: 1, a: 1}
-  _hoverColor: {r: 0.56817377, g: 0.8379654, b: 0.9056604, a: 1}
-  _sceneToLoad: Map
 --- !u!65 &731925781855487527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1450,5 +1513,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 500, y: 70, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8342341753246983959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7887967859931023885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d705bcd25f6b843b98ae57cd2a421e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 7656009493407912065}
+  _initialColor: {r: 1, g: 1, b: 1, a: 1}
+  _hoverColor: {r: 0.5686275, g: 0.83921576, b: 0.9058824, a: 1}
+  _sceneToLoad: Map
