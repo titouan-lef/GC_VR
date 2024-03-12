@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 2955678741533006430, guid: ec703f03ecfe3de4299281ffe078b032,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3688716357291892986, guid: ec703f03ecfe3de4299281ffe078b032,
         type: 3}
@@ -575,7 +575,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1632706357}
   - component: {fileID: 1632706356}
-  - component: {fileID: 1632706358}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -590,7 +589,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632706355}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d1e8620710b40a54e884d5fda6fba82a, type: 3}
@@ -694,14 +693,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1632706358
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632706355}
-  m_Enabled: 1
 --- !u!1001 &2145883455
 PrefabInstance:
   m_ObjectHideFlags: 0
