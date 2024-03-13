@@ -4,6 +4,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonPressVisual : MonoBehaviour
 {
+    [Header("Game Object")]
+    [SerializeField] private GameObject _buttonObject;
+
     [Header("Visual")]
     [SerializeField] private Transform _visualTarget;
     [SerializeField] private Material _selectedMaterial;
@@ -99,5 +102,10 @@ public class ButtonPressVisual : MonoBehaviour
         Debug.Log("Select");
         _meshRenderer.material = _selectedMaterial;
         _currentMaterial = _selectedMaterial;
+    }
+
+    public void EnableButton()
+    {
+        _buttonObject.SetActive(true);
     }
 }

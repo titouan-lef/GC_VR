@@ -532,7 +532,7 @@ MonoBehaviour:
   _text: {fileID: 125637884241325914}
   _initialColor: {r: 1, g: 1, b: 1, a: 1}
   _hoverColor: {r: 0.5686275, g: 0.83921576, b: 0.9058824, a: 1}
-  _sceneToLoad: Map
+  _sceneToLoad: Tuto
 --- !u!1 &2814618522164444277
 GameObject:
   m_ObjectHideFlags: 0
