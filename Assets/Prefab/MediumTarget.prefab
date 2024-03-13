@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6809414676112365585}
   - component: {fileID: 8801376763531118211}
   m_Layer: 0
-  m_Name: Military target
+  m_Name: MediumTarget
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   associatedKey: 0
+  targetType: 1
   _targetHitEvent: {fileID: 11400000, guid: 5428c5b9ed85c904d8f5b10ffe0d0643, type: 2}
 --- !u!65 &8801376763531118211
 BoxCollider:

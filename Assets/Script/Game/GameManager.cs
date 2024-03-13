@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private LuckyLuke _luckyLukeManager;
 
     [SerializeField]
-    private Target _target;
+    private List<GameObject> _targetTypes;
 
     [SerializeField]
     private GameObject _targets;
@@ -77,8 +77,8 @@ public class GameManager : MonoBehaviour
         LevelSetup currentLevelSetup = _levelSetup[level];
         for (int i = 0; i < currentLevelSetup.targetsPoses.Count; i++)
         {
-            var newTarget = Instantiate(_target, currentLevelSetup.targetsPoses[i], currentLevelSetup.targetsRotation[i], _targets.transform);
-            newTarget.associatedKey = i;
+            var newTarget = Instantiate(_targetTypes[currentLevelSetup.targetsType[i]], currentLevelSetup.targetsPoses[i], currentLevelSetup.targetsRotation[i], _targets.transform);
+            newTarget.GetComponent<Target>().associatedKey = i;
         }
 
         Debug.Log("Selected Level " + level);
