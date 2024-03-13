@@ -56,6 +56,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4902845419510524601}
     m_Modifications:
+    - target: {fileID: 31326656741546488, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}
+    - target: {fileID: 609807148140653400, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}
+    - target: {fileID: 1007371280760758628, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}
+    - target: {fileID: 2422676305798422416, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18b7077021f17f542a71d765c770bc6c, type: 2}
     - target: {fileID: 2422676305800322418, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -111,6 +131,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: M4_8
       objectReference: {fileID: 0}
+    - target: {fileID: 4840470489923830368, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}
+    - target: {fileID: 7859519060755758340, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}
+    - target: {fileID: 8588853319115125996, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
