@@ -41,6 +41,9 @@ public class ScoreTable : MonoBehaviour
     {
         _time = time;
         _targetNumber = targetNumber;
+
+        _textTimer.text = _time.ToString("F2");
+        _textTarget.text = _targetNumber.ToString();
     }
 
     public void Reset()
@@ -53,7 +56,11 @@ public class ScoreTable : MonoBehaviour
     {
         --_targetNumber;
 
+        Debug.Log("Decrement");
+
         if (_targetNumber < 0)
             _targetNumber = 0;
+
+        _textTarget.text = _targetNumber.ToString();
     }
 }

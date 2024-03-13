@@ -13,6 +13,9 @@ public class Target : MonoBehaviour
     private Light _light;
 
     [SerializeField]
+    private AudioSource _audioSource;
+
+    [SerializeField]
     private TargetHitEvent _targetHitEvent;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class Target : MonoBehaviour
 
     public void TargetHit()
     {
+        _audioSource.Play();
         _targetHitEvent.Raise(associatedKey);
     }
 

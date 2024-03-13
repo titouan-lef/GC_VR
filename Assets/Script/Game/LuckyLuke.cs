@@ -43,6 +43,7 @@ public class LuckyLuke : MiniGame
             }
             Debug.Log("DRAW !");
             _startTime = Time.time;
+            scoreTable.StartScoreTable();
             StartCoroutine(EndLuckyLuke());
         }
     }
@@ -51,13 +52,15 @@ public class LuckyLuke : MiniGame
     {
         yield return new WaitForSeconds(timeToShoot);
         _canPlayerPlay = false;
-        foreach (var target in allTargets)
-        {
-            target.GetComponent<Target>().SwitchLightOff();
-        }
+        
         if (_score < allTargets.Length)
         {
+            foreach (var target in allTargets)
+            {
+                target.GetComponent<Target>().SwitchLightOff();
+            }
             Debug.Log("You Lose !");
+            ResetScoreTable();
         }
     }
 
@@ -73,7 +76,6 @@ public class LuckyLuke : MiniGame
                 if (_score == allTargets.Length)
                 {
                     Debug.Log("You Win !");
-                    StopCoroutine(EndLuckyLuke());
                     _canPlayerPlay = false;
 
                     // Trigger Event for Game Manager

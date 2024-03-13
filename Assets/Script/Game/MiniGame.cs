@@ -9,6 +9,9 @@ public abstract class MiniGame : MonoBehaviour
     private LevelUpEvent _levelUpEvent;
 
     [SerializeField]
+    private ResetTableEvent _resetTableEvent;
+
+    [SerializeField]
     protected int _difficulty;
 
     protected bool _canPlayerPlay;
@@ -39,5 +42,10 @@ public abstract class MiniGame : MonoBehaviour
     protected void LevelUp()
     {
         _levelUpEvent.Raise();
+    }
+
+    protected void ResetScoreTable()
+    {
+        _resetTableEvent.Raise();
     }
 }

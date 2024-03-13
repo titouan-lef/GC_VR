@@ -67,11 +67,23 @@ public class Simon : MiniGame
             {
                 Debug.Log("FAILED");
                 _canPlayerPlay = false;
+                ResetScoreTable();
             }
 
             _playerCurrentOrder = _canPlayerPlay ? _playerCurrentOrder + 1 : 0;
 
-            scoreTable.DecrementScore();
+            if (_canPlayerPlay)
+            {
+                scoreTable.DecrementScore();
+                StartCoroutine(Flash());
+            }
+
+            IEnumerator Flash()
+            {
+                allTargets[_simonOrder[id]].GetComponent<Target>().SwitchLightOn();
+                yield return new WaitForSeconds(.1f);
+                allTargets[_simonOrder[id]].GetComponent<Target>().SwitchLightOff();
+            }
         }     
     }
 }

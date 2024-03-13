@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     public void StartCurrentLevel()
     {
         StartLevel(_level);
-        _scoreTable.StartScoreTable();
     }
 
     private void StartLevel(int level)
@@ -84,17 +83,22 @@ public class GameManager : MonoBehaviour
         Debug.Log("Selected Level " + level);
         _level = level;
 
-        switch ((int)_levelManager[level].x)
+        ResetScoreTable();
+    }
+
+    public void ResetScoreTable()
+    {
+        LevelSetup currentLevelSetup = _levelSetup[_level];
+        switch ((int)_levelManager[_level].x)
         {
             case 0:
                 break;
             case 1:
-                _scoreTable.ResetAffichage(0.0f, (int)_levelManager[level].y);
+                _scoreTable.ResetAffichage(0.0f, (int)_levelManager[_level].y);
                 break;
             case 2:
                 _scoreTable.ResetAffichage(_luckyLukeManager.timeToShoot, currentLevelSetup.targetsPoses.Count);
                 break;
         }
-        
     }
 }
