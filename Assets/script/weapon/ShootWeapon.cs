@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ShootWeapon : MonoBehaviour
@@ -47,6 +49,9 @@ public class ShootWeapon : MonoBehaviour
 
     private GameObject currentMagazine;
 
+    [SerializeField]
+    TextMeshProUGUI nbBulletUI;
+
     public void Fire()
     {
         if (isCharged && canShoot)
@@ -68,21 +73,14 @@ public class ShootWeapon : MonoBehaviour
             {
                 RunOutOfAmo();
             }
-        }
-    }
-    private IEnumerator waitForNextShot()
-    {
-        yield return new WaitForSeconds(m_FireRate);
-        canShoot = true;
-        if(isTriggerPressed)
-        {
-            Fire();
+            UpdateUI();
         }
     }
 
     public void StartFire()
     {
         isTriggerPressed = true;
+        Fire();
     }
     public void StopFire()
     {
@@ -104,6 +102,29 @@ public class ShootWeapon : MonoBehaviour
     public void RunOutOfAmo()
     {
         isCharged = false;
+        currentMagazine.GetComponent<Rigidbody>().useGravity = true;
         currentMagazine.GetComponent<XRGrabInteractable>().enabled = false;
+        StartCoroutine(DestroyMagazine(currentMagazine));
+    }
+
+    private void UpdateUI()
+    {
+        nbBulletUI.text = nbCurrentBullet.ToString();
+    }
+
+    private IEnumerator waitForNextShot()
+    {
+        yield return new WaitForSeconds(m_FireRate);
+        canShoot = true;
+        if (isTriggerPressed)
+        {
+            Fire();
+        }
+    }
+
+    private IEnumerator DestroyMagazine(GameObject magazine)
+    {
+        yield return new WaitForSeconds(2.0f);
+        Destroy(magazine);
     }
 }

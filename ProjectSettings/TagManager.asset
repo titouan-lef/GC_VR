@@ -7,6 +7,10 @@ TagManager:
   - Target
   - Pistol
   - Negev
+  - PistolMagazin
+  - NegevMagazine
+  - M4Magazin
+  - M4
   layers:
   - Default
   - TransparentFX
