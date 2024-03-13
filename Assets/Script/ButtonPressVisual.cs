@@ -34,7 +34,7 @@ public class ButtonPressVisual : MonoBehaviour
 
     private bool _isPressing = false;                   // Button is pressed
 
-    void Start()
+    private void OnEnable()
     {
         _initialLocalPos = _visualTarget.localPosition;
         _pressLocalPos = _initialLocalPos + _localAxis * _lenghtPress;
@@ -45,8 +45,9 @@ public class ButtonPressVisual : MonoBehaviour
         _interactable.hoverExited.AddListener(HoverExitButton);
 
         _meshRenderer = transform.parent.GetComponent<MeshRenderer>();
-        _currentMaterial = _meshRenderer.material;
-        _initialMaterial = _currentMaterial;
+        _initialMaterial = _meshRenderer.material;
+        _meshRenderer.material = _selectedMaterial;
+        _currentMaterial = _selectedMaterial;
     }
 
     private void PressButton(BaseInteractionEventArgs hover)
@@ -107,5 +108,10 @@ public class ButtonPressVisual : MonoBehaviour
     public void EnableButton()
     {
         _buttonObject.SetActive(true);
+    }
+
+    public bool IsEnabled()
+    {
+        return _buttonObject.activeInHierarchy;
     }
 }

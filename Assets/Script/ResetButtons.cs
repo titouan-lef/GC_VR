@@ -6,9 +6,13 @@ using UnityEngine;
 public class ResetButtons : MonoBehaviour
 {
     private List<ButtonPressVisual> _buttons = new List<ButtonPressVisual>();
+    private int _currentMaxLevel;
+    private int _currentLevel;
 
     private void Start()
     {
+        _currentLevel = 1;
+        _currentMaxLevel = _currentLevel;
         foreach (Transform levelButtons in transform)
         {
             foreach (Transform buttons in levelButtons)
@@ -24,11 +28,35 @@ public class ResetButtons : MonoBehaviour
                 }
             }
         }
+
+        _buttons[0].EnableButton();
     }
 
-    public void Reset(int id)
+    public void ResetSelection(int id)
     {
-        foreach (ButtonPressVisual button in _buttons)
-            button.Deselect();
+        _currentLevel = id;
+        foreach (var button in _buttons)
+        {
+            if (button.IsEnabled())
+            {
+                button.Deselect();
+            }
+        }
+    }
+
+    public void UnlockButton()
+    {
+        _currentMaxLevel++;
+        _buttons[_currentMaxLevel - 1].EnableButton();
+    }
+
+    public void LevelUpSelection()
+    {
+        ResetSelection(_currentLevel);
+        _currentLevel++;
+        if (_buttons[_currentLevel - 1].IsEnabled())
+        {
+            _buttons[_currentLevel - 1].Select();
+        }
     }
 }

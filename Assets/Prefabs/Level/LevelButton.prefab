@@ -178,6 +178,7 @@ MonoBehaviour:
   _lenghtPress: 0.05
   _buttonPressEvent: {fileID: 11400000, guid: 535f91c7520017c40a3ad9dc0b04c50e, type: 2}
   _buttonPressIndex: 0
+  _meshRenderer: {fileID: 6565365764968888097}
 --- !u!1 &3781029647832140227
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +600,12 @@ PrefabInstance:
 --- !u!4 &6334173356828007776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5477749408508380018, guid: 844f8a77afe8d0e429f7ccf77ef57504,
+    type: 3}
+  m_PrefabInstance: {fileID: 7213815477678268910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6565365764968888097 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4683669308469848369, guid: 844f8a77afe8d0e429f7ccf77ef57504,
     type: 3}
   m_PrefabInstance: {fileID: 7213815477678268910}
   m_PrefabAsset: {fileID: 0}
