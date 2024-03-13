@@ -80,9 +80,9 @@ public class Simon : MiniGame
 
             IEnumerator Flash()
             {
-                allTargets[_simonOrder[id]].GetComponent<Target>().SwitchLightOn();
+                allTargets[id].GetComponent<Target>().SwitchLightOn();
                 yield return new WaitForSeconds(.1f);
-                allTargets[_simonOrder[id]].GetComponent<Target>().SwitchLightOff();
+                allTargets[id].GetComponent<Target>().SwitchLightOff();
             }
         }     
     }

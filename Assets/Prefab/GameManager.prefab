@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 6912997649426050472}
   - component: {fileID: 954602046719215458}
   - component: {fileID: 1746239105943557299}
+  - component: {fileID: 7516184730733326085}
+  - component: {fileID: 8362205944594508396}
   - component: {fileID: 2135472171564115846}
   m_Layer: 0
   m_Name: GameManager
@@ -51,12 +53,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3775a3c37b89fad4698c48b6b7d1f9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _target: {fileID: -6809414676112365585, guid: 8049b9538b9f38646afe4ab6c88ba37a,
+    type: 3}
+  _targets: {fileID: 0}
+  _levelSetup:
+  - {fileID: 11400000, guid: c9b1aa101d33d7743bf1d7c59295d4cb, type: 2}
+  - {fileID: 11400000, guid: c9b1aa101d33d7743bf1d7c59295d4cb, type: 2}
+  - {fileID: 11400000, guid: 3dca7658607bbe94980e82c27b70fdb6, type: 2}
+  - {fileID: 11400000, guid: 8e666a0f8b2944142b3598949d253309, type: 2}
+  - {fileID: 11400000, guid: 3dca7658607bbe94980e82c27b70fdb6, type: 2}
   _levelManager:
   - {x: 0, y: 0}
   - {x: 1, y: 4}
   - {x: 2, y: 2}
   - {x: 1, y: 6}
   - {x: 2, y: 4}
+  _maxLevelUpEvent: {fileID: 11400000, guid: 3ea6a27036a6f474fa24a98d43168595, type: 2}
 --- !u!114 &7056445137670681278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _resetTableEvent: {fileID: 0}
   _difficulty: 0
 --- !u!114 &2227881703268951739
 MonoBehaviour:
@@ -112,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _resetTableEvent: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
   _difficulty: 5
 --- !u!114 &6912997649426050472
 MonoBehaviour:
@@ -126,7 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _resetTableEvent: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
   _difficulty: 2
+  timeToShoot: 0
 --- !u!114 &954602046719215458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +211,62 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7516184730733326085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588189215502096576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b539d893631b4408fb423e49a0ae55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 78787a18ccf99db4db6ee9d2fab98cd7, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7607237025143152110}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartCurrentLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8362205944594508396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588189215502096576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b938e2f37ddb1438c69587154cb6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7607237025143152110}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResetScoreTable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2135472171564115846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +279,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab6cec2dfa17f440ae1742c37193c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetParent: {fileID: 0}

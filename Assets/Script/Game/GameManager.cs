@@ -21,7 +21,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private UnityEngine.Vector2[] _levelManager;
 
+    [SerializeField]
+    private MaxLevelUpEvent _maxLevelUpEvent;
+
     private int _level;
+    private int _currentMaxLevel;
 
     private MiniGame[] _allModes;
 
@@ -31,6 +35,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _level = 1;
+        _currentMaxLevel = _level;
 
         _tutoManager = GetComponent<Tuto>();
         _simonManager = GetComponent<Simon>();
@@ -61,9 +66,16 @@ public class GameManager : MonoBehaviour
 
     public void LevelUp()
     {
+        if (_level == _currentMaxLevel)
+        {
+            _maxLevelUpEvent.Raise();
+            _currentMaxLevel++;
+        }
         _level++;
         SelectLevel(_level);
     }
+
+    
 
     public void SelectLevel(int level)
     {

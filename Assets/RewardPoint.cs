@@ -11,7 +11,8 @@ public class RewardPoint : MonoBehaviour
 
     public void SpawnReward()
     {
-        Instantiate(m_WeaponParts[m_Index]);
+        var go = Instantiate(m_WeaponParts[m_Index], transform);
+        go.transform.localPosition = Vector3.zero;
         m_Index++;
     }
 }

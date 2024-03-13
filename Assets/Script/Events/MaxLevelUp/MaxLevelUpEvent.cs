@@ -4,10 +4,10 @@ using UnityEngine;
 /// <summary> 
 /// An event that can be raised without any parameter. 
 /// </summary> 
-[CreateAssetMenu(fileName = "Void_Channel", menuName = "Scriptable Objects/Events/ResetTableEvent")]
-public class ResetTableEvent : ScriptableObject
+[CreateAssetMenu(fileName = "Void_Channel", menuName = "Scriptable Objects/Events/MaxLevelUpEvent")]
+public class MaxLevelUpEvent : ScriptableObject
 {
-    private readonly List<ResetTableListener> _listeners = new();
+    private readonly List<MaxLevelUpListener> _listeners = new();
 
     /// <summary> 
     /// Raises the event. This will trigger all the listeners. 
@@ -20,7 +20,7 @@ public class ResetTableEvent : ScriptableObject
     /// <summary> 
     /// Registers a listener to the event. 
     /// </summary> 
-    public void Register(ResetTableListener listener)
+    public void Register(MaxLevelUpListener listener)
     {
         if (!_listeners.Contains(listener))
             _listeners.Add(listener);
@@ -28,7 +28,7 @@ public class ResetTableEvent : ScriptableObject
     /// <summary> 
     /// Unregisters a listener from the event. 
     /// </summary> 
-    public void Unregister(ResetTableListener listener)
+    public void Unregister(MaxLevelUpListener listener)
     {
         if (_listeners.Contains(listener))
             _listeners.Remove(listener);
