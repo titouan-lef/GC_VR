@@ -51,12 +51,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3775a3c37b89fad4698c48b6b7d1f9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetTypes:
+  - {fileID: 1501084758933746, guid: 57656fda6c1ae1b42b8a316d0dc60dac, type: 3}
+  - {fileID: 1501084758933746, guid: 8049b9538b9f38646afe4ab6c88ba37a, type: 3}
+  - {fileID: 1501084758933746, guid: 10fa3779be5ace442bf3c450d87cdf57, type: 3}
+  _targets: {fileID: 0}
+  _levelSetup:
+  - {fileID: 11400000, guid: a1f2c74f44963114c8646cf792363fda, type: 2}
+  - {fileID: 11400000, guid: 316b4ae749ea7124d9670b863facb960, type: 2}
+  - {fileID: 11400000, guid: fa9fed37f77cd494caafa55c9761e1bf, type: 2}
+  - {fileID: 11400000, guid: ccde0a7ce07ab7b4087dca21efe748c9, type: 2}
+  - {fileID: 11400000, guid: e7b543f7b8273d8438a83115af7bf212, type: 2}
+  - {fileID: 11400000, guid: 840da8fce074fd04db475ffe1e74883f, type: 2}
   _levelManager:
-  - {x: 0, y: 0}
   - {x: 1, y: 4}
-  - {x: 2, y: 2}
-  - {x: 1, y: 6}
-  - {x: 2, y: 4}
+  - {x: 2, y: 7}
+  - {x: 1, y: 5}
+  - {x: 2, y: 6}
+  - {x: 1, y: 7}
+  - {x: 2, y: 7}
 --- !u!114 &7056445137670681278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
   _difficulty: 2
+  timeToShoot: 0
 --- !u!114 &954602046719215458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +221,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab6cec2dfa17f440ae1742c37193c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetParent: {fileID: 0}
