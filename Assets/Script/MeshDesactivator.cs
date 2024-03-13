@@ -28,7 +28,6 @@ public class MeshDesactivator : MonoBehaviour
     void OnInteractableEnter(SelectEnterEventArgs e)
     {
         (e.interactableObject as XRGrabInteractable).colliders.ForEach(c => c.enabled = false);
-
     }
 
 

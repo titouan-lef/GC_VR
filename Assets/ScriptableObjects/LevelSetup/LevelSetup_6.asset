@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55925ad6905346446bc1bb0569d4f0fa, type: 3}
+  m_Name: LevelSetup_6
+  m_EditorClassIdentifier: 
+  targetsPoses:
+  - {x: 4.4222775, y: 4.62, z: -24.18}
+  - {x: 2.9222775, y: 1.97, z: -24.422043}
+  - {x: 1.4222775, y: 4.62, z: -24.422043}
+  - {x: -0.07772255, y: 4.62, z: -24.422043}
+  - {x: -1.5777225, y: 1.97, z: -24.422043}
+  - {x: -3.0777225, y: 4.62, z: -24.422043}
+  targetsRotation:
+  - {x: -0.55403227, y: -0.21201213, z: -0.14845248, w: 0.79124016}
+  - {x: -0.73994213, y: -0.16636564, z: -0.19826686, w: 0.62088513}
+  - {x: -0.5735764, y: -0, z: 0, w: 0.8191521}
+  - {x: -0.5735764, y: -0, z: 0, w: 0.8191521}
+  - {x: -0.73994213, y: 0.1663657, z: 0.19826692, w: 0.62088513}
+  - {x: -0.55403227, y: 0.2120122, z: 0.14845252, w: 0.79124016}
+  targetsType: 000000000000000000000000000000000000000000000000

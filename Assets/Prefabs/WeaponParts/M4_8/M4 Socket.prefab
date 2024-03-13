@@ -133,6 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4840470489923830368, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
         type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840470489923830368, guid: 355b20dcc4b7d9243b74e4b525d6ea93,
+        type: 3}
       propertyPath: m_InteractableHoverMeshMaterial
       value: 
       objectReference: {fileID: 2100000, guid: b55c224892525de4b95a10fbbdd46c1a, type: 2}

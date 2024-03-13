@@ -8,6 +8,9 @@ public class Target : MonoBehaviour
     [SerializeField]
     public int associatedKey = 0;
 
+    [SerializeField]
+    public int targetType = 0;
+
     private int _correctedKey;
 
     private Light _light;
