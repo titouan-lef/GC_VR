@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
                 _scoreTable.ResetAffichage(0.0f, (int)_levelManager[_level - 1].y);
                 break;
             case 2:
-                _scoreTable.ResetAffichage(_luckyLukeManager.timeToShoot, currentLevelSetup.targetsPoses.Count);
+                _scoreTable.ResetAffichage(_luckyLukeManager.GetTimeToShoot((int)_levelManager[_level - 1].y), currentLevelSetup.targetsPoses.Count);
                 break;
         }
     }
