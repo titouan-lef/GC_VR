@@ -14,7 +14,7 @@ public class LuckyLuke : MiniGame
         allTargets = GameObject.FindGameObjectsWithTag("Target");
         SortTargets();
         _canPlayerPlay = false;
-        _timeToShoot = 10.0f/(float)_difficulty;
+        _timeToShoot = (float)_difficulty;
 
         scoreTable = FindAnyObjectByType<ScoreTable>();
     }
@@ -24,7 +24,7 @@ public class LuckyLuke : MiniGame
         allTargets = GameObject.FindGameObjectsWithTag("Target");
         SortTargets();
         _difficulty = difficulty;
-        _timeToShoot = 10.0f / (float)_difficulty;
+        _timeToShoot = (float)_difficulty;
         float timeToPrepare = Random.Range(2.0f, 5.0f);
         _score = 0;
 
@@ -91,7 +91,7 @@ public class LuckyLuke : MiniGame
 
     public float GetTimeToShoot(int difficulty)
     {
-        _timeToShoot = 10.0f / (float)difficulty;
+        _timeToShoot = (float)difficulty;
         return _timeToShoot;
     }
 }
