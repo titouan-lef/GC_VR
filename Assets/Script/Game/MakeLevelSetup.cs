@@ -2,6 +2,7 @@ using Unity.XR.CoreUtils;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 public class MakeLevelSetup : MonoBehaviour
 {
     private static LevelSetup _asset;
@@ -25,3 +26,4 @@ public class MakeLevelSetup : MonoBehaviour
         Selection.activeObject = _asset;
     }
 }
+#endif

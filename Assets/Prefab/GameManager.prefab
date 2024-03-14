@@ -64,13 +64,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ccde0a7ce07ab7b4087dca21efe748c9, type: 2}
   - {fileID: 11400000, guid: e7b543f7b8273d8438a83115af7bf212, type: 2}
   - {fileID: 11400000, guid: 840da8fce074fd04db475ffe1e74883f, type: 2}
+  - {fileID: 11400000, guid: 93425c5db025c7d4e91a8eca98c62fcd, type: 2}
+  - {fileID: 11400000, guid: 93425c5db025c7d4e91a8eca98c62fcd, type: 2}
+  - {fileID: 11400000, guid: f719a5b5204ffe84cbe17cdfcf848131, type: 2}
+  - {fileID: 11400000, guid: f719a5b5204ffe84cbe17cdfcf848131, type: 2}
+  - {fileID: 11400000, guid: e66d4851b143e2546adf37ea38ec326a, type: 2}
+  - {fileID: 11400000, guid: e66d4851b143e2546adf37ea38ec326a, type: 2}
+  - {fileID: 11400000, guid: 256c2d4a94d4a884e88a7a2f72255ca0, type: 2}
   _levelManager:
   - {x: 1, y: 4}
-  - {x: 2, y: 7}
+  - {x: 2, y: 8}
   - {x: 1, y: 5}
-  - {x: 2, y: 6}
+  - {x: 2, y: 7}
   - {x: 1, y: 7}
   - {x: 2, y: 7}
+  - {x: 2, y: 6}
+  - {x: 1, y: 8}
+  - {x: 1, y: 8}
+  - {x: 2, y: 7}
+  - {x: 1, y: 10}
+  - {x: 2, y: 8}
   _maxLevelUpEvent: {fileID: 11400000, guid: 3ea6a27036a6f474fa24a98d43168595, type: 2}
 --- !u!114 &7056445137670681278
 MonoBehaviour:

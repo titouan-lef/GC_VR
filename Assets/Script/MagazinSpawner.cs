@@ -22,7 +22,8 @@ public class MagazinSpawner : MonoBehaviour
     {
         Righthands.selectEntered.AddListener(RightReloadMagazine);
         Lefthands.selectEntered.AddListener(LeftReloadMagazine);
-        //Lefthands.selectExited.AddListener(test);
+        Righthands.selectExited.AddListener(test);
+        Lefthands.selectExited.AddListener(test);
     }
     public void RightReloadMagazine(SelectEnterEventArgs e)
     {
@@ -81,11 +82,13 @@ public class MagazinSpawner : MonoBehaviour
             _magazins.Add(Instantiate(MagazinM4, currentPosition, transform.rotation, null));
         }
     }
-    /*private void test(SelectExitEventArgs e)
+    private void test(SelectExitEventArgs e)
     {
-        if (tag == "PistolMagazin")
+        if ((e.interactableObject as XRGrabInteractable != null) && ((e.interactableObject as XRGrabInteractable).gameObject.CompareTag("PistolMagazin") || (e.interactableObject as XRGrabInteractable).gameObject.CompareTag("NegevMagazine") || (e.interactableObject as XRGrabInteractable).gameObject.CompareTag("M4Magazin")))
         {
-            (e.interactableObject as XRGrabInteractable).gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            Debug.Log((e.interactableObject as XRGrabInteractable).gameObject.GetComponent<Rigidbody>().constraints);
+            (e.interactableObject as XRGrabInteractable).gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
         }
-    }*/
+    }
 }

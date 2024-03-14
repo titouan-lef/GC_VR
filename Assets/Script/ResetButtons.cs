@@ -46,6 +46,7 @@ public class ResetButtons : MonoBehaviour
 
     public void UnlockButton()
     {
+        Debug.Log("Proc");
         _currentMaxLevel++;
         _buttons[_currentMaxLevel - 1].EnableButton();
     }

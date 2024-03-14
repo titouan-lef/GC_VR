@@ -1,12 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.XR.Interaction.Toolkit.UI;
-using UnityEditor.VersionControl;
-using Unity.XR.CoreUtils;
-using Unity.Properties;
 
 [CreateAssetMenu(fileName = "LevelSetup_X", menuName = "Scriptable Objects/Level Setup")]
 public class LevelSetup : ScriptableObject

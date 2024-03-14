@@ -109,10 +109,13 @@ MonoBehaviour:
     type: 3}
   m_LaunchBulletPoint: {fileID: 4938927688906856489}
   m_LaunchBulletCasePoint: {fileID: 1266372255889109208}
-  m_LaunchSpeed: 20
+  m_LaunchSpeed: 15
   m_EjectSpeed: 50
   anim: {fileID: 4007463406956088174}
-  fireSound: {fileID: 6218958345749131712}
+  weaponSource: {fileID: 6218958345749131712}
+  fireSound: {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
+  noAmmoSound: {fileID: 8300000, guid: af849522f3445eb4fac6d8b0632b3f15, type: 3}
+  reloadSound: {fileID: 8300000, guid: 58b7b52bc76dde14481fd01d5356a3a5, type: 3}
   m_FireRate: 0.2
   nbBullet: 25
   nbBulletUI: {fileID: 6641817030435883980}
@@ -468,7 +471,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0dbe91efb8ee94e6695ef0f552d202ce, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

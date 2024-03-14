@@ -29,6 +29,7 @@ public class WeaponUnlock : MonoBehaviour
                 GameObject part = parts[parts.Count -1];
                 parts.Remove(part);
                 Destroy(part);
+                Debug.Log("completed");
             }
             Destroy(this.gameObject);
         }
