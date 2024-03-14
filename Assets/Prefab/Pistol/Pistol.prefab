@@ -987,7 +987,10 @@ MonoBehaviour:
   m_LaunchSpeed: 20
   m_EjectSpeed: 25
   anim: {fileID: 2218563695087075773}
-  fireSound: {fileID: 279197992993077370}
+  weaponSource: {fileID: 279197992993077370}
+  fireSound: {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
+  noAmmoSound: {fileID: 8300000, guid: af849522f3445eb4fac6d8b0632b3f15, type: 3}
+  reloadSound: {fileID: 8300000, guid: 58b7b52bc76dde14481fd01d5356a3a5, type: 3}
   m_FireRate: 0.1
   nbBullet: 12
   nbBulletUI: {fileID: 1716008931238399407}

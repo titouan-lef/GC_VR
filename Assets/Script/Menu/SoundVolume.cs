@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SoundVolume
+public class SoundVolume : MonoBehaviour
 {
     private static SoundVolume _instance;
 

@@ -31,7 +31,16 @@ public class ShootWeapon : MonoBehaviour
     Animator anim;
 
     [SerializeField]
-    AudioSource fireSound;
+    AudioSource weaponSource;
+
+    [SerializeField]
+    AudioClip fireSound;
+
+    [SerializeField]
+    AudioClip noAmmoSound;
+
+    [SerializeField]
+    AudioClip reloadSound;
 
     [SerializeField]
     float m_FireRate = 0.5f;
@@ -65,7 +74,8 @@ public class ShootWeapon : MonoBehaviour
                 ApplyForce(bulletCaserigidBody, m_EjectSpeed);
 
             anim.SetTrigger("Shoot");
-            fireSound.Play();
+            weaponSource.clip = fireSound;
+            weaponSource.Play();
             canShoot = false;
             StartCoroutine(waitForNextShot());
             nbCurrentBullet--;
@@ -74,6 +84,11 @@ public class ShootWeapon : MonoBehaviour
                 RunOutOfAmo();
             }
             UpdateUI();
+        }
+        if (!isCharged)
+        {
+            weaponSource.clip = noAmmoSound;
+            weaponSource.Play();
         }
     }
 
@@ -94,6 +109,8 @@ public class ShootWeapon : MonoBehaviour
 
     public void ReloadWeapon(GameObject magazine)
     {
+        weaponSource.clip = reloadSound;
+        weaponSource.Play();
         isCharged = true;
         currentMagazine = magazine;
         nbCurrentBullet = nbBullet;
