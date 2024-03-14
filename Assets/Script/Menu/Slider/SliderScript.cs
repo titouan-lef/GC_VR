@@ -4,11 +4,10 @@ using UnityEngine.UI;
 
 public class SliderScript : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
-    [SerializeField] private TextMeshProUGUI _sliderText;
+    [SerializeField] protected Slider _slider;
+    [SerializeField] protected TextMeshProUGUI _sliderText;
 
-    // Start is called before the first frame update
-    void Start()
+    protected void Init()
     {
         _slider.onValueChanged.AddListener(v =>
         {
