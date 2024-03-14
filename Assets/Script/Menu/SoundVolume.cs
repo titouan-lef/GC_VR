@@ -3,16 +3,14 @@ using UnityEngine.Audio;
 
 public class SoundVolume
 {
-    [SerializeField] private AudioMixer _soundMixer;
-    [SerializeField] private AudioMixer _musicMixer;
-
     private static SoundVolume _instance;
 
-    private float _soundParam = 0.2f;
-    private float _musicParam = 0.2f;
+    // Sound and music volume [0, 100]
+    private float _soundParam = 0;
+    private float _musicParam = 0;
 
-    public float SoundParam { get => _soundParam; }
-    public float MusicParam { get => _musicParam; }
+    public float SoundParam { get => _soundParam; set => _soundParam = value; }
+    public float MusicParam { get => _musicParam; set => _musicParam = value; }
 
     public static SoundVolume Instance
     {
@@ -24,23 +22,5 @@ public class SoundVolume
             }
             return _instance;
         }
-    }
-
-    public void Init()
-    {
-        ChangeSoundVolume(_soundParam);
-        ChangeMusicVolume(_musicParam);
-    }
-
-    public void ChangeSoundVolume(float value)
-    {
-        _soundParam = value;
-        //_soundMixer.SetFloat("SoundVolume", Mathf.Log10(value) * 20);
-    }
-
-    public void ChangeMusicVolume(float value)
-    {
-        _musicParam = value;
-        //_musicMixer.SetFloat("SoundVolume", Mathf.Log10(value) * 20);
     }
 }

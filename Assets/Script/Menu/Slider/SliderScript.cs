@@ -1,22 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SliderScript : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _sliderText;
     [SerializeField] protected Slider _slider;
-    [SerializeField] protected TextMeshProUGUI _sliderText;
+    [SerializeField] protected AudioMixer _audioMixer;
 
-    protected void Init()
+    protected void ChangeVolume()
     {
-        _slider.onValueChanged.AddListener(v =>
-        {
-            _sliderText.text = v.ToString("0") + " %";
-            SetSliderValue(v);
-        });
-    }
-
-    protected virtual void SetSliderValue(float value)
-    {
+        _sliderText.text = _slider.value.ToString("0") + " %";
     }
 }
