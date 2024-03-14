@@ -113,6 +113,7 @@ public class ShootWeapon : MonoBehaviour
         isCharged = true;
         currentMagazine = magazine;
         nbCurrentBullet = nbBullet;
+        UpdateUI();
     }
 
     public void RunOutOfAmo()
