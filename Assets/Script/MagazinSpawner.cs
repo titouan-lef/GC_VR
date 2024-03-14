@@ -26,20 +26,20 @@ public class MagazinSpawner : MonoBehaviour
     }
     public void RightReloadMagazine(SelectEnterEventArgs e)
     {
-        if((e.interactableObject as XRGrabInteractable).gameObject.tag != null)
+        if(e.interactableObject as XRGrabInteractable != null)
         {
-            SelectMagazin(RightPositionMagazine.position, LeftPositionMagazine.position, (e.interactableObject as XRGrabInteractable).gameObject.tag, e);
+            SelectMagazin(RightPositionMagazine.position, LeftPositionMagazine.position, (e.interactableObject as XRGrabInteractable).gameObject.tag, (e.interactableObject as XRGrabInteractable).gameObject);
         }
     }
     public void LeftReloadMagazine(SelectEnterEventArgs e)
     {
-        if ((e.interactableObject as XRGrabInteractable).gameObject.tag != null)
+        if (e.interactableObject as XRGrabInteractable != null)
         {
-            SelectMagazin(LeftPositionMagazine.position, RightPositionMagazine.position, (e.interactableObject as XRGrabInteractable).gameObject.tag, e);
+            SelectMagazin(LeftPositionMagazine.position, RightPositionMagazine.position, (e.interactableObject as XRGrabInteractable).gameObject.tag, (e.interactableObject as XRGrabInteractable).gameObject);
         }
     }
 
-    private void SelectMagazin(Vector3 currentPosition, Vector3 oppositePosition, string tag, SelectEnterEventArgs e)
+    private void SelectMagazin(Vector3 currentPosition, Vector3 oppositePosition, string tag, GameObject interractable)
     {
         if (tag == "Pistol")
         {
@@ -67,14 +67,17 @@ public class MagazinSpawner : MonoBehaviour
         }
         if (tag == "PistolMagazin")
         {
+            _magazins.Remove(interractable);
             _magazins.Add(Instantiate(MagazinPistol, currentPosition, transform.rotation, null));
         }
         if (tag == "NegevMagazin")
         {
+            _magazins.Remove(interractable);
             _magazins.Add(Instantiate(MagazinNegev, currentPosition, transform.rotation, null));
         }
         if (tag == "M4Magazin")
         {
+            _magazins.Remove(interractable);
             _magazins.Add(Instantiate(MagazinM4, currentPosition, transform.rotation, null));
         }
     }
