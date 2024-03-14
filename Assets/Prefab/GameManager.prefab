@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6912997649426050472}
   - component: {fileID: 954602046719215458}
   - component: {fileID: 1746239105943557299}
+  - component: {fileID: 8442087858245345062}
   - component: {fileID: 2135472171564115846}
   m_Layer: 0
   m_Name: GameManager
@@ -70,6 +71,7 @@ MonoBehaviour:
   - {x: 2, y: 6}
   - {x: 1, y: 7}
   - {x: 2, y: 7}
+  _maxLevelUpEvent: {fileID: 11400000, guid: 3ea6a27036a6f474fa24a98d43168595, type: 2}
 --- !u!114 &7056445137670681278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _resetTableEvent: {fileID: 0}
   _difficulty: 0
 --- !u!114 &2227881703268951739
 MonoBehaviour:
@@ -125,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _resetTableEvent: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
   _difficulty: 5
 --- !u!114 &6912997649426050472
 MonoBehaviour:
@@ -139,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
+  _resetTableEvent: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
   _difficulty: 2
   timeToShoot: 0
 --- !u!114 &954602046719215458
@@ -201,6 +206,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SelectLevel
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8442087858245345062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588189215502096576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b539d893631b4408fb423e49a0ae55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 78787a18ccf99db4db6ee9d2fab98cd7, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7607237025143152110}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartCurrentLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
