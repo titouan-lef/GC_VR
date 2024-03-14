@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class MusicSliderScript : SliderScript
+public class MusicXRSliderScript : XRSliderScript
 {
-    private void Start()
+    private void Awake()
     {
         _slider.value = SoundVolume.Instance.MusicParam;
         ChangeMusicVolume();
@@ -10,7 +10,7 @@ public class MusicSliderScript : SliderScript
 
     public void ChangeMusicVolume()
     {
-        ChangeVolume();
+        _sliderText.text = "Music : " + (100 * _slider.value).ToString("0") + " %";
         _audioMixer.SetFloat("MusicVolume", Mathf.Log10(_slider.value) * 20 + 1);
         SoundVolume.Instance.MusicParam = _slider.value;
     }

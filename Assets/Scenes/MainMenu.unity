@@ -390,11 +390,6 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1632706359}
-    - target: {fileID: 1643684655935146154, guid: 55415918bfafc3942acfd065c53ef4fa,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeMusicVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 1816879791787228286, guid: 55415918bfafc3942acfd065c53ef4fa,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -402,19 +397,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2871667896964622754, guid: 55415918bfafc3942acfd065c53ef4fa,
         type: 3}
-      propertyPath: m_Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2871667896964622754, guid: 55415918bfafc3942acfd065c53ef4fa,
-        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1632706358}
-    - target: {fileID: 2871667896964622754, guid: 55415918bfafc3942acfd065c53ef4fa,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeSoundVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 3083732674089474908, guid: 55415918bfafc3942acfd065c53ef4fa,
         type: 3}
       propertyPath: m_AnchorMax.y

@@ -11,6 +11,6 @@ public class SliderScript : MonoBehaviour
 
     protected void ChangeVolume()
     {
-        _sliderText.text = _slider.value.ToString("0") + " %";
+        _sliderText.text = (100 * _slider.value).ToString("0") + " %";
     }
 }

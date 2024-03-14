@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SoundVolume : MonoBehaviour
+public class SoundVolume
 {
     private static SoundVolume _instance;
 
-    // Sound and music volume [0, 100]
-    private float _soundParam = 0;
-    private float _musicParam = 0;
+    // Sound and music volume [0, 1]
+    private float _soundParam = 0.2f;
+    private float _musicParam = 0.2f;
 
     public float SoundParam { get => _soundParam; set => _soundParam = value; }
     public float MusicParam { get => _musicParam; set => _musicParam = value; }
