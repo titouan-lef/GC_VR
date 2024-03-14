@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2227881703268951739}
   - component: {fileID: 6912997649426050472}
   - component: {fileID: 954602046719215458}
+  - component: {fileID: 3181826369609067147}
   - component: {fileID: 1746239105943557299}
   - component: {fileID: 8442087858245345062}
   - component: {fileID: 2135472171564115846}
@@ -58,19 +59,19 @@ MonoBehaviour:
   - {fileID: 1501084758933746, guid: 10fa3779be5ace442bf3c450d87cdf57, type: 3}
   _targets: {fileID: 0}
   _levelSetup:
-  - {fileID: 11400000, guid: a1f2c74f44963114c8646cf792363fda, type: 2}
-  - {fileID: 11400000, guid: 316b4ae749ea7124d9670b863facb960, type: 2}
-  - {fileID: 11400000, guid: fa9fed37f77cd494caafa55c9761e1bf, type: 2}
-  - {fileID: 11400000, guid: ccde0a7ce07ab7b4087dca21efe748c9, type: 2}
-  - {fileID: 11400000, guid: e7b543f7b8273d8438a83115af7bf212, type: 2}
-  - {fileID: 11400000, guid: 840da8fce074fd04db475ffe1e74883f, type: 2}
+  - {fileID: 11400000, guid: b20622ee2dd60a1438812e5a52b96f29, type: 2}
+  - {fileID: 11400000, guid: 356d0a6efede8f4419c1d24deaa12609, type: 2}
+  - {fileID: 11400000, guid: b162db8094d13314282dc24bdb0fa91c, type: 2}
+  - {fileID: 11400000, guid: b162db8094d13314282dc24bdb0fa91c, type: 2}
+  - {fileID: 11400000, guid: b20622ee2dd60a1438812e5a52b96f29, type: 2}
+  - {fileID: 11400000, guid: b20622ee2dd60a1438812e5a52b96f29, type: 2}
   _levelManager:
-  - {x: 1, y: 4}
-  - {x: 2, y: 7}
-  - {x: 1, y: 5}
-  - {x: 2, y: 6}
-  - {x: 1, y: 7}
-  - {x: 2, y: 7}
+  - {x: 0, y: 0}
+  - {x: 2, y: 10}
+  - {x: 1, y: 3}
+  - {x: 2, y: 10}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
   _maxLevelUpEvent: {fileID: 11400000, guid: 3ea6a27036a6f474fa24a98d43168595, type: 2}
 --- !u!114 &7056445137670681278
 MonoBehaviour:
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
-  _resetTableEvent: {fileID: 0}
+  _resetTableEvent: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
   _difficulty: 0
 --- !u!114 &2227881703268951739
 MonoBehaviour:
@@ -145,7 +146,6 @@ MonoBehaviour:
   _levelUpEvent: {fileID: 11400000, guid: 119e5386935bad54bb0bd2ee3e9321ee, type: 2}
   _resetTableEvent: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
   _difficulty: 2
-  timeToShoot: 0
 --- !u!114 &954602046719215458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +178,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: LuckyLuke, Assembly-CSharp
         m_MethodName: TouchedTarget
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3181826369609067147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588189215502096576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b938e2f37ddb1438c69587154cb6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: aa20a7967c080e5479a337bfb57f7d30, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7607237025143152110}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResetScoreTable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

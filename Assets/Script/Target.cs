@@ -16,7 +16,7 @@ public class Target : MonoBehaviour
     private Light _light;
 
     [SerializeField]
-    private AudioSource _audioSource;
+    private AudioClip _audioClip;
 
     [SerializeField]
     private TargetHitEvent _targetHitEvent;
@@ -34,7 +34,7 @@ public class Target : MonoBehaviour
 
     public void TargetHit()
     {
-        _audioSource.Play();
+        AudioSource.PlayClipAtPoint(_audioClip, transform.position);
         _targetHitEvent.Raise(associatedKey);
     }
 

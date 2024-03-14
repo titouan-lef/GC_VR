@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _level = 0;
+        _level = 1;
         _currentMaxLevel = _level;
 
         _tutoManager = GetComponent<Tuto>();
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     private void StartLevel(int level)
     {
         Debug.Log("Starting Level " + level);
-        _allModes[(int)_levelManager[level - 1].x].StartMiniGame((int)_levelManager[level - 1].y);
+        _allModes[(int)_levelManager[level].x].StartMiniGame((int)_levelManager[level].y);
     }
 
     public void LevelUp()
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
             Destroy(_targets.transform.GetChild(i).gameObject);
         }
 
-        LevelSetup currentLevelSetup = _levelSetup[level - 1];
+        LevelSetup currentLevelSetup = _levelSetup[level];
         for (int i = 0; i < currentLevelSetup.targetsPoses.Count; i++)
         {
             var newTarget = Instantiate(_targetTypes[currentLevelSetup.targetsType[i]], currentLevelSetup.targetsPoses[i], currentLevelSetup.targetsRotation[i], _targets.transform);
@@ -100,16 +100,16 @@ public class GameManager : MonoBehaviour
 
     public void ResetScoreTable()
     {
-        LevelSetup currentLevelSetup = _levelSetup[_level - 1];
-        switch ((int)_levelManager[_level - 1].x)
+        LevelSetup currentLevelSetup = _levelSetup[_level];
+        switch ((int)_levelManager[_level].x)
         {
             case 0:
                 break;
             case 1:
-                _scoreTable.ResetAffichage(0.0f, (int)_levelManager[_level - 1].y);
+                _scoreTable.ResetAffichage(0.0f, (int)_levelManager[_level].y);
                 break;
             case 2:
-                _scoreTable.ResetAffichage(_luckyLukeManager.GetTimeToShoot((int)_levelManager[_level - 1].y), currentLevelSetup.targetsPoses.Count);
+                _scoreTable.ResetAffichage(_luckyLukeManager.GetTimeToShoot((int)_levelManager[_level].y), currentLevelSetup.targetsPoses.Count);
                 break;
         }
     }

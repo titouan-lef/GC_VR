@@ -58,7 +58,7 @@ public class LuckyLuke : MiniGame
         {
             foreach (var target in allTargets)
             {
-                target.GetComponent<Target>().SwitchLightOff();
+                if (target) target.GetComponent<Target>().SwitchLightOff();
             }
             Debug.Log("You Lose !");
             ResetScoreTable();
