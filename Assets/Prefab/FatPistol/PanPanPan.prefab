@@ -734,10 +734,13 @@ MonoBehaviour:
     type: 3}
   m_LaunchBulletPoint: {fileID: 3212369273350707934}
   m_LaunchBulletCasePoint: {fileID: 8952126383404538925}
-  m_LaunchSpeed: 750
+  m_LaunchSpeed: 15
   m_EjectSpeed: 100
   anim: {fileID: 8355403260525913248}
+  weaponSource: {fileID: 0}
   fireSound: {fileID: 4379631723508284045}
+  noAmmoSound: {fileID: 0}
+  reloadSound: {fileID: 0}
   m_FireRate: 0.1
   nbBullet: 150
   nbBulletUI: {fileID: 4943089599622720982}

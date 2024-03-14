@@ -109,7 +109,7 @@ MonoBehaviour:
     type: 3}
   m_LaunchBulletPoint: {fileID: 4938927688906856489}
   m_LaunchBulletCasePoint: {fileID: 1266372255889109208}
-  m_LaunchSpeed: 20
+  m_LaunchSpeed: 15
   m_EjectSpeed: 50
   anim: {fileID: 4007463406956088174}
   weaponSource: {fileID: 6218958345749131712}
