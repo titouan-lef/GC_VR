@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _numWeaponParts: 5
-  _weapon: {fileID: 1261748888023320, guid: 432643b6e5110004083fdff3e33e490b, type: 3}
+  _weapon: {fileID: 6373461081456108266, guid: bb2e4cc099da5d346ba3f38aa2c5c590, type: 3}
   parts: []
 --- !u!1001 &2226356401373145371
 PrefabInstance:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class disabledPhysics : MonoBehaviour
 {
@@ -15,5 +16,8 @@ public class disabledPhysics : MonoBehaviour
         rb.useGravity = false;
         coll.enabled = false;
     }
-
+    public void SetParent(Transform parent)
+    {
+        transform.parent = parent;
+    }
 }

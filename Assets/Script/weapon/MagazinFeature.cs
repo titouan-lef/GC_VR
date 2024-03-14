@@ -22,6 +22,7 @@ public class MagazinFeature : MonoBehaviour
     void MagazinCharged(SelectEnterEventArgs e)
     {
         (e.interactableObject as XRGrabInteractable).GetComponent<disabledPhysics>().DisablePhysics();
-        (e.interactorObject as XRSocketInteractor).transform.parent.parent.GetComponent<ShootWeapon>().ReloadWeapon();
+        (e.interactableObject as XRGrabInteractable).GetComponent<disabledPhysics>().SetParent(transform);
+        (e.interactorObject as XRSocketInteractor).transform.parent.GetComponent<ShootWeapon>().ReloadWeapon((e.interactableObject as XRGrabInteractable).gameObject);
     }
 }

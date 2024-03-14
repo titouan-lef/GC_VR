@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Target
+  - Pistol
+  - Negev
+  - PistolMagazin
+  - NegevMagazine
+  - M4Magazin
+  - M4
   layers:
   - Default
   - TransparentFX

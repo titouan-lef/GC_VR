@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TutoSetup_1
   m_EditorClassIdentifier: 
   targetsPoses:
-  - {x: 0, y: 3.233, z: -23.082}
+  - {x: 0, y: 3, z: -26}
   targetsRotation:
   - {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  targetsType: 01000000
+  targetsType: 02000000
