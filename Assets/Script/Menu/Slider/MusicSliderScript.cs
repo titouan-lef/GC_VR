@@ -11,7 +11,7 @@ public class MusicSliderScript : SliderScript
     public void ChangeMusicVolume()
     {
         ChangeVolume();
-        _audioMixer.SetFloat("MusicVolume", Mathf.Log10(_slider.value) * 20 + 1);
+        _audioMixer.SetFloat("MusicVolume", Mathf.Log10(_slider.value) * 40 + 1);
         SoundVolume.Instance.MusicParam = _slider.value;
     }
 }

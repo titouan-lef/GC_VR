@@ -23,6 +23,9 @@ public class ButtonPressVisual : MonoBehaviour
     [Header("Button Label")]
     [SerializeField] private int _buttonPressIndex = 0;
 
+    [Header("Button Sound")]
+    [SerializeField] private AudioSource _audioSource;
+
     private MeshRenderer _meshRenderer;
     private Material _initialMaterial;
     private Material _currentMaterial;
@@ -59,6 +62,7 @@ public class ButtonPressVisual : MonoBehaviour
         {
             _buttonPressEvent.Raise(_buttonPressIndex);
             _isPressing = true;
+            _audioSource.Play();
             _meshRenderer.material = _selectedMaterial;
             _currentMaterial = _selectedMaterial;
             StartCoroutine(MoveButton());

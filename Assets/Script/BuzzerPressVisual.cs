@@ -15,6 +15,9 @@ public class BuzzerPressVisual : MonoBehaviour
     [Header("Button Event Listener")]
     [SerializeField] private BuzzerPressEvent _buzzerPressEvent;
 
+    [Header("Button Sound")]
+    [SerializeField] private AudioSource _audioSource;
+
     private Vector3 _initialLocalPos;
     private Vector3 _pressLocalPos;
 
@@ -46,6 +49,8 @@ public class BuzzerPressVisual : MonoBehaviour
 
     private IEnumerator MoveButton()
     {
+        _audioSource.Play();
+
         while (_visualTarget.localPosition != _pressLocalPos)
         {
             _visualTarget.localPosition = Vector3.Lerp(_visualTarget.localPosition, _pressLocalPos, Time.deltaTime * _speedMovement);
@@ -57,6 +62,8 @@ public class BuzzerPressVisual : MonoBehaviour
             _visualTarget.localPosition = Vector3.Lerp(_visualTarget.localPosition, _initialLocalPos, Time.deltaTime * _speedMovement);
             yield return null;
         }
+
+        yield return new WaitForSeconds(2);
 
         _isPressing = false;
     }
