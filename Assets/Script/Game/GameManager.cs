@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     private LuckyLuke _luckyLukeManager;
 
     [SerializeField]
+    private AudioSource _winLevelSound;
+
+    [SerializeField]
     private List<GameObject> _targetTypes;
 
     [SerializeField]
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviour
         }
         _level++;
         SelectLevel(_level);
+        _winLevelSound.Play();
     }
 
     

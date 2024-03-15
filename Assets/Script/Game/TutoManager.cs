@@ -30,7 +30,7 @@ public class TutoManager : MonoBehaviour
                 break;
             case 2:
                 _rangeTuto.transform.GetChild(0).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Lucky Luke";
-                _rangeTuto.transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "All Targets will flash at once. Shoot them all before the time runs out. Hit the Buzzer when Rready.";
+                _rangeTuto.transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "All Targets will flash at once. Shoot them all before the time runs out. Hit the Buzzer when Ready.";
                 break;
             case 3:
                 _rangeTuto.transform.GetChild(0).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Turn Around";

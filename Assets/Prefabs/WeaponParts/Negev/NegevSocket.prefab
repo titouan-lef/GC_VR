@@ -153,6 +153,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8129120250950180825}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28168127901682095}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
         type: 3}
       insertIndex: -1
@@ -161,6 +165,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2921513572674418088}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 900882227149079318}
     - targetCorrespondingSourceObject: {fileID: 100004, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
         type: 3}
       insertIndex: -1
@@ -169,6 +177,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3982508790144581529}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7889711068165050971}
     - targetCorrespondingSourceObject: {fileID: 100006, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
         type: 3}
       insertIndex: -1
@@ -177,6 +189,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2774363459959371790}
+    - targetCorrespondingSourceObject: {fileID: 100006, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3919955192281593875}
     - targetCorrespondingSourceObject: {fileID: 100008, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
         type: 3}
       insertIndex: -1
@@ -185,6 +201,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2107186683111602394}
+    - targetCorrespondingSourceObject: {fileID: 100008, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 74508023997304343}
   m_SourcePrefab: {fileID: 100100000, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e, type: 3}
 --- !u!1 &2226356401373114291 stripped
 GameObject:
@@ -224,10 +244,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2107186683111602394}
-        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
-        m_MethodName: DesactivateMesh
-        m_Mode: 1
+      - m_Target: {fileID: 2963074462170341041}
+        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
+        m_MethodName: AddWeaponPart
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -236,10 +256,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2963074462170341041}
-        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
-        m_MethodName: AddWeaponPart
-        m_Mode: 0
+      - m_Target: {fileID: 2107186683111602394}
+        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
+        m_MethodName: DesactivateMesh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -290,6 +310,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _socket: {fileID: 541664728513148584}
+--- !u!65 &74508023997304343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226356401373114291}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0037103947, y: 0.030098025, z: 0.02763681}
+  m_Center: {x: 0.020722892, y: -0.014000963, z: -0.0016746204}
 --- !u!1 &2226356401373114297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
@@ -328,10 +369,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8129120250950180825}
-        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
-        m_MethodName: DesactivateMesh
-        m_Mode: 1
+      - m_Target: {fileID: 2963074462170341041}
+        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
+        m_MethodName: AddWeaponPart
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -340,10 +381,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2963074462170341041}
-        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
-        m_MethodName: AddWeaponPart
-        m_Mode: 0
+      - m_Target: {fileID: 8129120250950180825}
+        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
+        m_MethodName: DesactivateMesh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -394,6 +435,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _socket: {fileID: 9113682679444631822}
+--- !u!65 &28168127901682095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226356401373114297}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09735735, y: 0.20179582, z: 0.8615608}
+  m_Center: {x: 0.023545625, y: 0.014672514, z: 0.0052072704}
 --- !u!1 &2226356401373114299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
@@ -432,10 +494,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2921513572674418088}
-        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
-        m_MethodName: DesactivateMesh
-        m_Mode: 1
+      - m_Target: {fileID: 2963074462170341041}
+        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
+        m_MethodName: AddWeaponPart
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -444,10 +506,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2963074462170341041}
-        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
-        m_MethodName: AddWeaponPart
-        m_Mode: 0
+      - m_Target: {fileID: 2921513572674418088}
+        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
+        m_MethodName: DesactivateMesh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -498,6 +560,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _socket: {fileID: 3692350438384123433}
+--- !u!65 &900882227149079318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226356401373114299}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.058359686, y: 0.021090942, z: 0.076446265}
+  m_Center: {x: -0.050131574, y: 0.0033450245, z: 0.016244728}
 --- !u!1 &2226356401373114301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
@@ -536,10 +619,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2774363459959371790}
-        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
-        m_MethodName: DesactivateMesh
-        m_Mode: 1
+      - m_Target: {fileID: 2963074462170341041}
+        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
+        m_MethodName: AddWeaponPart
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -548,10 +631,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2963074462170341041}
-        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
-        m_MethodName: AddWeaponPart
-        m_Mode: 0
+      - m_Target: {fileID: 2774363459959371790}
+        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
+        m_MethodName: DesactivateMesh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -602,6 +685,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _socket: {fileID: 5846276868196917719}
+--- !u!65 &3919955192281593875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226356401373114301}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05349003, y: 0.042451493, z: 0.21666583}
+  m_Center: {x: 0.027705533, y: 0.0043079862, z: 0.10296056}
 --- !u!1 &2226356401373114303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,
@@ -640,10 +744,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3982508790144581529}
-        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
-        m_MethodName: DesactivateMesh
-        m_Mode: 1
+      - m_Target: {fileID: 2963074462170341041}
+        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
+        m_MethodName: AddWeaponPart
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -652,10 +756,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2963074462170341041}
-        m_TargetAssemblyTypeName: WeaponUnlock, Assembly-CSharp
-        m_MethodName: AddWeaponPart
-        m_Mode: 0
+      - m_Target: {fileID: 3982508790144581529}
+        m_TargetAssemblyTypeName: MeshDesactivator, Assembly-CSharp
+        m_MethodName: DesactivateMesh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -706,6 +810,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _socket: {fileID: 5082305077646581391}
+--- !u!65 &7889711068165050971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226356401373114303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14536506, y: 0.18951595, z: 0.0633897}
+  m_Center: {x: -0.028695676, y: -0.023411088, z: 0}
 --- !u!4 &2226356401373279123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: 01890195b95a26f4fa4aa4f8f5a0cc5e,

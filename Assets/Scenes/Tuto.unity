@@ -1323,7 +1323,7 @@ PrefabInstance:
       value: 'The best VR Aim Trainer.
 
 
-        To move, use Grab to TP on cylinders
+        Use Grab to teleport on cylinders
         on the ground'
       objectReference: {fileID: 0}
     - target: {fileID: 3005102274721942737, guid: 46f25211172d81c439ab7c1a36c2c18e,
@@ -2543,7 +2543,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Everytime you finish a level, you'll be granted a Weapon Part in the
-        center of the room. Take it and drag to its place on the weapon Blueprint.
+        center of the room. Take it and drag to its place on the weapon's Blueprint.
         Gather all pieces to unlock the weapon
       objectReference: {fileID: 0}
     - target: {fileID: 4548948437779183722, guid: 46f25211172d81c439ab7c1a36c2c18e,
@@ -5608,8 +5608,9 @@ PrefabInstance:
     - target: {fileID: 3005102274721942737, guid: 46f25211172d81c439ab7c1a36c2c18e,
         type: 3}
       propertyPath: m_text
-      value: To Play, you need to shoot the targets that will appear. Shoot the target
-        when it lights up. Hit the Buzzer when you are Ready.
+      value: The game consists on Targets you need to shoot in specific orders or
+        as fast as possible. Shoot the target when it lights up. Hit the Buzzer when
+        you are Ready.
       objectReference: {fileID: 0}
     - target: {fileID: 4548948437779183722, guid: 46f25211172d81c439ab7c1a36c2c18e,
         type: 3}
@@ -7516,7 +7517,7 @@ Transform:
   m_GameObject: {fileID: 1588189216079213804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.73087347, y: 2.105423, z: -8.223735}
+  m_LocalPosition: {x: 0.26, y: 2.105423, z: -23.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8042,11 +8043,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259361770}
     m_Modifications:
-    - target: {fileID: 541664728513148584, guid: 1aa0d634531424f4e80a06fa2bd45792,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1293262315}
     - target: {fileID: 907376538628698672, guid: 1aa0d634531424f4e80a06fa2bd45792,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8102,26 +8098,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NegevSocket
       objectReference: {fileID: 0}
-    - target: {fileID: 3692350438384123433, guid: 1aa0d634531424f4e80a06fa2bd45792,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1293262315}
-    - target: {fileID: 5082305077646581391, guid: 1aa0d634531424f4e80a06fa2bd45792,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1293262315}
-    - target: {fileID: 5846276868196917719, guid: 1aa0d634531424f4e80a06fa2bd45792,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1293262315}
-    - target: {fileID: 9113682679444631822, guid: 1aa0d634531424f4e80a06fa2bd45792,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1293262315}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8182,6 +8158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3775a3c37b89fad4698c48b6b7d1f9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelUpSound: {fileID: 8300000, guid: 27aca5d349b8a0249b720a268cf0e2a0, type: 3}
   _targetTypes:
   - {fileID: 1501084758933746, guid: 57656fda6c1ae1b42b8a316d0dc60dac, type: 3}
   - {fileID: 1501084758933746, guid: 8049b9538b9f38646afe4ab6c88ba37a, type: 3}
